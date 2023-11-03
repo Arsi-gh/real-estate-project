@@ -1,0 +1,231 @@
+{
+  "USERS": [
+    {
+      "name": "Arsalan",
+      "email": "arsalanghoochani15@gmail.com",
+      "password": "arsi-2003",
+      "passwordConfirmation": "arsi-2003",
+      "createdAt": "2023-10-28T17:48:06.704Z",
+      "id": 1
+    },
+    {
+      "name": "mostafa shirzad",
+      "email": "mostafashirzad@gmail.com",
+      "password": "mosi-2003",
+      "passwordConfirmation": "mosi-2003",
+      "createdAt": "2023-10-28T17:50:55.054Z",
+      "id": 2
+    },
+    {
+      "name": "kosibro",
+      "email": "kosibro@gmail.com",
+      "password": "kosi-moisss",
+      "passwordConfirmation": "kosi-moisss",
+      "createdAt": "2023-10-28T17:59:44.926Z",
+      "id": 3
+    }
+  ],
+  "ESTATES": [
+    {
+      "id": 1,
+      "title": "Modern 2-bedroom apartment in los angles",
+      "location": "USA , Los angles",
+      "typeIcon": "",
+      "type": "house",
+      "forRent": false,
+      "price": "5.000.000",
+      "rooms": 3,
+      "guestrooms": 1,
+      "bathrooms": 2,
+      "size": 600,
+      "built_date": 2020,
+      "garage": 2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/header-imgs/y-1.png",
+        "/header-imgs/y-2.png",
+        "/estate-page/1.png",
+        "/estate-page/2.png"
+      ],
+      "amentities": [
+        {
+          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Modern 1-bedroom apartment in los santos",
+      "location": "USA , Los santos",
+      "typeIcon": "",
+      "type": "apartment",
+      "forRent": true,
+      "price": "5.000",
+      "rooms": 1,
+      "guestrooms": 1,
+      "bathrooms": 1,
+      "size": 100,
+      "built_date": 2022,
+      "garage": 1,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/1.png",
+        "/estates-imgs/12.png",
+        "/estates-imgs/5.png",
+        "/estates-imgs/11.png"
+      ],
+      "amentities": [
+        {
+          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Modern 5-bedroom house in california",
+      "location": "USA , California",
+      "typeIcon": "",
+      "type": "house",
+      "forRent": false,
+      "price": "10.000.000",
+      "rooms": 5,
+      "guestrooms": 2,
+      "bathrooms": 3,
+      "size": 600,
+      "built_date": 2023,
+      "garage": 4,
+      "desc": "Lorem ipsum dolor sit amet colendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/6.png",
+        "/estates-imgs/9.png",
+        "/estates-imgs/10.png",
+        "/estates-imgs/12.png"
+      ],
+      "amentities": [
+        {
+          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Modern 1-bedroom apartment in los santos",
+      "location": "USA , Los santos",
+      "typeIcon": "",
+      "type": "apartment",
+      "forRent": true,
+      "price": "5.000",
+      "rooms": 1,
+      "guestrooms": 1,
+      "bathrooms": 1,
+      "size": 100,
+      "built_date": 2022,
+      "garage": 1,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/13.png",
+        "/estates-imgs/12.png",
+        "/estates-imgs/5.png",
+        "/estates-imgs/11.png"
+      ],
+      "amentities": [
+        {
+          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Modern 1-bedroom apartment in los santos",
+      "location": "USA , Los santos",
+      "typeIcon": "",
+      "type": "apartment",
+      "forRent": true,
+      "price": "5.000",
+      "rooms": 1,
+      "guestrooms": 1,
+      "bathrooms": 1,
+      "size": 100,
+      "built_date": 2022,
+      "garage": 1,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/3.png",
+        "/estates-imgs/12.png",
+        "/estates-imgs/5.png",
+        "/estates-imgs/11.png"
+      ],
+      "amentities": [
+        {
+          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    }
+  ],
+  "Advisors": []
+}
