@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NavControls from "./dashboardComponents/globalUsage/NavControls";
+import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
 
 export default function Nav({displayLogin , displaySignUp , displayAddEstate}) {
   return (
@@ -19,17 +20,17 @@ export default function Nav({displayLogin , displaySignUp , displayAddEstate}) {
 const AuthenticateControls = () => {
   return (
     <div>
-      <button onClick={() => displaySignUp(true)} className="px-4 p-2 bg-white shadow-customeOne text-neutral-800 rounded-sm font-bold mr-2">sign up</button>
-      <button onClick={() => displayLogin(true)} className="px-4 p-2 bg-neutral-800 rounded-sm font-bold text-white">login</button>
+      <button onClick={() => displaySignUp(true)} className="px-4 p-2 bg-white shadow-customeOne text-neutral-800 rounded-md font-bold mr-2">sign up</button>
+      <button onClick={() => displayLogin(true)} className="px-4 p-2 bg-neutral-800 rounded-md shadow-customeFour font-bold text-white">login</button>
     </div>
   )
 }
 
 const AuthenticatedControls = () => {
   return (
-    <div>
-      <button onClick={() => displayLogin(true)} className="px-4 p-2 text-neutral-800">Favorites</button>
-      <button onClick={() => displaySignUp(true)} className="px-4 p-2 text-neutral-800">Log out</button>
+    <div className="flex gap-2">
+      <button onClick={() => displayLogin(true)} className="px-4 p-2 bg-neutral-800 rounded-md text-white shadow-customeFour">Favorites</button>
+      <button onClick={() => displaySignUp(true)} className="flex gap-2 px-4 p-2 bg-white shadow-customeOne rounded-md text-neutral-800">Log out <ArrowRightOnRectangleIcon className="w-[1.5rem]"/> </button>
     </div>
   )
 }

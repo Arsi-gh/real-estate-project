@@ -1,5 +1,5 @@
-import SearchCom from '@/components/FilterComponents/SearchCom'
-import SortCom from '@/components/FilterComponents/SortCom'
+import SearchCom from '@/components/FilterComponents/SearchFilterCom'
+import SortCom from '@/components/FilterComponents/SortFilterCom'
 import { TicketIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 

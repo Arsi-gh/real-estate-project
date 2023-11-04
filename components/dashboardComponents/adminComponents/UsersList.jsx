@@ -1,6 +1,10 @@
+import SearchCom from "@/components/FilterComponents/SearchFilterCom"
+import SortCom from "@/components/FilterComponents/SortFilterCom"
 import { ChevronDownIcon, MagnifyingGlassIcon, TrashIcon, UsersIcon } from "@heroicons/react/24/outline"
+import axios from "axios"
+import { useEffect, useState } from "react"
 
-export default function UsersList() {
+export default function UsersList({users}) {
   return (
     <div className="w-full">
         <UsersFilter/>
@@ -16,11 +20,8 @@ const UsersFilter = () => {
     return (
         <div className="flex gap-x-2 m-4 items-center">
             <b>Filter : </b>
-            <button className='flex gap-2 items-center p-1 px-3 bg-white shadow-customeOne rounded-md'>Sort <ChevronDownIcon className='w-[1.2rem]'/></button>
-            <div className="flex gap-2 items-center">
-                <input type="text" className="bg-white shadow-customeOne rounded-md p-1 px-2 text-base outline-neutral-800" placeholder="Search"/>
-                <MagnifyingGlassIcon strokeWidth={2} className="w-[2rem] h-[2rem] p-1  rounded-md text-white bg-neutral-800 cursor-pointer"/>
-            </div>
+            <SortCom/>
+            <SearchCom/>
         </div>
     )
 }
@@ -41,31 +42,39 @@ const UsersChartCon = () => {
 }
 
 const UsersCon = () => {
+
+    const [users , setUsers] = useState([])
+
+    const getFn = async () => {
+        const {data} = await axios.get('http://localhost:5000/users')
+        setUsers(data)
+    }
+    
+    useEffect(() => {
+        getFn()
+    } , [])
+
+    if (!users) return <div className="flex flex-col gap-2"> laoding </div>
+
     return (
         <div className="flex flex-col gap-2">
-            <UsersItem/>
-            <UsersItem/>
-            <UsersItem/>
-            <UsersItem/>
-            <UsersItem/>
-            <UsersItem/>
-            <UsersItem/>
-            <UsersItem/>
-            <UsersItem/>
+            {
+                users.map((user) => <UsersItem key={user.id} {...user}/>)
+            }
         </div>
     )
 }
 
-const UsersItem = () => {
+const UsersItem = ({id , name , email , createdAt}) => {
     return (
-        <div className="w-fit flex p-2 pl-4 gap-x-5 items-center rounded-lg bg-white shadow-customeOne">
-            <p>1</p>
+        <div className="w-[50rem] flex p-2 pl-4 gap-x-5  items-center rounded-lg bg-white shadow-customeOne">
+            <p>{id}</p>
             <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
-            <p>Arsalan ghoochani</p>
+            <p className="w-[10rem]">{name}</p>
             <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
-            <p>arsalaghoochani15@gmail.com</p>
+            <p className="flex-1">{email}</p>
             <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
-            <p><b>Created at : </b>2023 - 10 - 12</p>
+            <p><b>Created at : </b>{createdAt.slice(0 , 10)}</p>
             <TrashIcon  className="w-[1.6rem] cursor-pointer text-red-500"/>
         </div>
     )
