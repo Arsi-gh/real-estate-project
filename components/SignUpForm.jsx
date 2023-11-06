@@ -29,7 +29,7 @@ export default function SignUpForm({displayHandler}) {
   const formik = useFormik({
     initialValues,  
     onSubmit : async (values) => {
-        const res = await axios.post('http://localhost:5000/users' , {...values , createdAt : new Date().toISOString()})
+        const res = await axios.post('http://localhost:5000/users' , {...values , isAdmin : false , createdAt : new Date().toISOString()})
         if (res) {
             displayHandler(false)
             setCookie(res.data.id)

@@ -58,7 +58,7 @@ const FilterEstates = () => {
         <EstateType/>
         <Seperator/>
         {rent ? <RentStatePrice/> : <EstatePrice/>}
-        <button className="text-neutral-800 border-2 border-neutral-800 p-2 px-4  font-bold rounded-lg h-fit self-end mb-6 hover:bg-neutral-800 hover:text-white shadow-customeTwo">Find Estate</button>
+        <button className="p-[10px] px-4  font-bold rounded-lg h-fit self-end mb-6 bg-neutral-800 text-white shadow-customeFour">Find Estate</button>
       </div>
     </div>
   )

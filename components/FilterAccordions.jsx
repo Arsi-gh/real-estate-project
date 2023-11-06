@@ -61,10 +61,10 @@ export const PropertyLocation = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">one</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">two</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">three</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">four</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">one</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">two</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">three</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">four</li>
                 </ul>
             )}
         </div>
@@ -85,9 +85,8 @@ export const PropertySort = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">latest</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">oldest</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">popular</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">latest</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">oldest</li>
                 </ul>
             )}
         </div>
@@ -108,10 +107,10 @@ export const PropertyRooms = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">1 bedroom</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">2 bedrooms</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">3 bedrooms</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">+4 bedrooms</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">1 bedroom</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">2 bedrooms</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">3 bedrooms</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">+4 bedrooms</li>
                 </ul>
             )}
         </div>
@@ -132,10 +131,10 @@ export const PropertyBuiltDate = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">this year</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">5 years</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">10 years</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">+15 years</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">this year</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">5 years</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">10 years</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">+15 years</li>
                 </ul>
             )}
         </div>
@@ -156,11 +155,11 @@ export const PropertyMetrage = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">0 - 50 m2</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">50 - 100 m2</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">100 - 200 m2</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">200 - 300 m2</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">+300 m2</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">0 - 50 m2</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">50 - 100 m2</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">100 - 200 m2</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">200 - 300 m2</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">+300 m2</li>
                 </ul>
             )}
         </div>
@@ -181,12 +180,12 @@ export const PropertyFeatures = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">Garage</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">Laundry room</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">Cleset room</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">Guest room</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">Master room</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">Balkoni</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">Garage</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">Laundry room</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">Cleset room</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">Guest room</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">Master room</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">Balkoni</li>
                 </ul>
             )}
         </div>
@@ -205,10 +204,10 @@ const MinPrice = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4 px-2">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">one</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">two</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">three</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">four</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">one</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">two</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">three</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">four</li>
                 </ul>
             )}
         </div>
@@ -227,10 +226,10 @@ const MaxPrice = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4 px-2">
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">one</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">two</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">three</li>
-                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200">four</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">one</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">two</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">three</li>
+                    <li className="ml-5 p-2 px-4 cursor-pointer border-l-[1px] border-zinc-200 transition-all hover:bg-zinc-100">four</li>
                 </ul>
             )}
         </div>

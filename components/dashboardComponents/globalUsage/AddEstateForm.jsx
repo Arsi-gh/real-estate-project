@@ -20,7 +20,7 @@ export default function AddEstateForm({displayHandler}) {
   return (
     <>
       <div onClick={(e) => toggleDisplay(e)} className="w-screen h-screen z-20 bg-black opacity-70 fixed top-0 left-0"></div>
-      <form className="bg-white w-[40rem] h-[45.5rem] p-4 flex flex-col gap-2 gap-y-4 fixed top-[3%] left-[50%] transform -translate-x-[50%] rounded-lg z-30 shadow-customeFour">
+      <form className="bg-white w-[40rem]  p-4 flex flex-col gap-2 gap-y-4 fixed top-[3%] left-[50%] transform -translate-x-[50%] rounded-lg z-30 shadow-customeFour">
           <div className="flex w-full justify-between items-center">
             <h3 className="text-xl font-bold">Import new estate</h3>
             <XMarkIcon onClick={(e) => toggleDisplay(e)} className="w-[1.8rem] cursor-pointer"/>
@@ -38,8 +38,8 @@ const EstateFirstPart = () => {
     <>
       <h3 className="font-bold">Main estate info : </h3>
       <PartsCon><EstateTitle/></PartsCon>
-      <PartsCon><EstateStatus/></PartsCon>
-      <PartsCon><EstatePrice/></PartsCon>
+      <PartsCon><EstateLocation/></PartsCon>
+      <PartsCon><EstateStatus/><EstatePrice/></PartsCon>
       <span className="my-2 w-full h-[1px] bg-zinc-300"></span>
       <h3 className="font-bold">Features : </h3>
       <EstateProperties/>
@@ -84,10 +84,19 @@ const EstateStatus = () => {
   )
 }
 
+const EstateLocation = () => {
+  return (
+    <>
+        <label htmlFor="">Loaction : </label>
+        <input className="flex-1 bg-zinc-100 shadow-customeOne p-2 px-4 rounded-md text-neutral-800 outline-neutral-800" type="text"  placeholder="Ex : USA - los angles"/>
+    </>
+  )
+}
+
 const EstatePrice = () => {
   return (
     <>
-      <label htmlFor="text-lg">Price : </label>
+      <label className="ml-10" htmlFor="">Price : </label>
       <input className="shadow-customeOne bg-zinc-100 p-2 px-4 rounded-md text-neutral-800 outline-neutral-800" type="number" />
     </>
   )

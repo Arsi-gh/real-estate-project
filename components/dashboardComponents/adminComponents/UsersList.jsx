@@ -1,5 +1,6 @@
 import SearchCom from "@/components/FilterComponents/SearchFilterCom"
 import SortCom from "@/components/FilterComponents/SortFilterCom"
+import DeleteModal from "@/components/WarningModals/DeleteModal"
 import { ChevronDownIcon, MagnifyingGlassIcon, TrashIcon, UsersIcon } from "@heroicons/react/24/outline"
 import axios from "axios"
 import { useEffect, useState } from "react"
@@ -44,29 +45,37 @@ const UsersChartCon = () => {
 const UsersCon = () => {
 
     const [users , setUsers] = useState([])
+    const [isLoading , setIsLoading] = useState(false)
 
-    const getFn = async () => {
+    const fetchUsers = async () => {
+        setIsLoading(true)
         const {data} = await axios.get('http://localhost:5000/users')
         setUsers(data)
+        setIsLoading(false)
+
     }
     
     useEffect(() => {
-        getFn()
+        fetchUsers()
     } , [])
 
-    if (!users) return <div className="flex flex-col gap-2"> laoding </div>
+    if (isLoading) return <div className="flex flex-col gap-2"> laoding </div>
 
-    return (
+    if (users) return (
         <div className="flex flex-col gap-2">
             {
-                users.map((user) => <UsersItem key={user.id} {...user}/>)
+                users.map((user) => <UsersItem key={user.id} fetchUsers={fetchUsers} {...user}/>)
             }
         </div>
     )
 }
 
-const UsersItem = ({id , name , email , createdAt}) => {
+const UsersItem = ({id , name , email , createdAt , fetchUsers}) => {
+
+    const [displayModal , setDisplayModal] = useState(false)
+
     return (
+        <>
         <div className="w-[50rem] flex p-2 pl-4 gap-x-5  items-center rounded-lg bg-white shadow-customeOne">
             <p>{id}</p>
             <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
@@ -75,7 +84,9 @@ const UsersItem = ({id , name , email , createdAt}) => {
             <p className="flex-1">{email}</p>
             <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
             <p><b>Created at : </b>{createdAt.slice(0 , 10)}</p>
-            <TrashIcon  className="w-[1.6rem] cursor-pointer text-red-500"/>
+            <TrashIcon onClick={() => setDisplayModal(true)} className="w-[1.6rem] cursor-pointer text-red-500"/>
         </div>
+        {displayModal && <DeleteModal id={id} category="users" text='user' display={setDisplayModal} callback={fetchUsers}/>}
+        </>
     )
 }

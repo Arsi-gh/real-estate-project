@@ -12,12 +12,13 @@ export default function Nav({displayLogin , displaySignUp , displayAddEstate}) {
             <Link href="/contact" className="p-2 px-5 rounded-md cursor-pointer hover:bg-zinc-200 transition-all">Contact us</Link>
             <Link href="/about" className="p-2 px-5 rounded-md cursor-pointer hover:bg-zinc-200 transition-all">About us</Link>
         </ul>
+        {/* <AuthenticateControls displaySignUp={displaySignUp}/> */}
         <NavControls displayAddEstate={displayAddEstate}/>
     </nav>
   )
 }
 
-const AuthenticateControls = () => {
+const AuthenticateControls = ({displaySignUp}) => {
   return (
     <div>
       <button onClick={() => displaySignUp(true)} className="px-4 p-2 bg-white shadow-customeOne text-neutral-800 rounded-md font-bold mr-2">sign up</button>
