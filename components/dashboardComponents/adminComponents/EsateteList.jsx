@@ -5,7 +5,8 @@ import SortCom from '@/components/FilterComponents/SortFilterCom'
 import DeleteModal from '@/components/WarningModals/DeleteModal'
 import { CpuChipIcon, EyeIcon, EyeSlashIcon, FilmIcon, FingerPrintIcon, HomeIcon, HomeModernIcon, LockClosedIcon, MagnifyingGlassIcon, PencilSquareIcon, ShoppingCartIcon, TrashIcon, WifiIcon, WrenchScrewdriverIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect, useRef, useState } from 'react'
 import { BiBath, BiBed, BiCalendar } from 'react-icons/bi'
 import { MdOutlinePhotoSizeSelectSmall } from 'react-icons/md'
 import { PiGarageDuotone } from 'react-icons/pi'
@@ -28,7 +29,7 @@ export default function EsateteList() {
 
 const EstateFilters = () => {
     return (
-        <div className='flex gap-2  items-center'>
+        <div className='flex gap-2 items-center'>
             <b>Filter : </b>
             <SortCom/>
             <PropertyCom/>
@@ -79,10 +80,13 @@ const EstateItem = ({id , title , forRent , price , images , activeEstate , togg
 
 const EstatePreview = ({id}) => {
 
+    const containerRef = useRef()
     const [estate , setEstate] = useState(null)
     const [isLoading , setIsLoading] = useState(false)
     const [displayEdit , setDisplayEdit] = useState(false)
     const [displayDelete , setDisplayDelete] = useState(false)
+
+    const router = useRouter()
 
     const fetchEstate = async () => {
         if (!id) return
@@ -94,6 +98,9 @@ const EstatePreview = ({id}) => {
 
     useEffect(() => {
         fetchEstate()
+        if (containerRef.current) {
+            containerRef.current.scrollTo(0 , 0)
+        }
     } , [id])
 
     if (!id) return <div className='w-[25rem] h-[39rem] overflow-auto flex flex-col justify-center items-center p-2 gap-2 rounded-lg bg-zinc-200 shadow-customeOne'> <HomeIcon className='w-[3rem] text-neutral-600'/> Select a estate for more infos</div> 
@@ -102,7 +109,7 @@ const EstatePreview = ({id}) => {
     
     if (estate) return (  
         <>
-            <div className='w-[25rem] h-[39rem] overflow-auto flex flex-wrap justify-between items-center p-2 gap-2 rounded-lg bg-white shadow-customeOne'>
+            <div ref={containerRef} className='w-[25rem] h-[39rem] overflow-auto flex flex-wrap justify-between items-center p-2 gap-2 rounded-lg bg-white shadow-customeOne'>
                 <img className='w-full h-[15rem] rounded-lg' src={estate.images[0]} alt="" />
                 <div className='flex gap-2'>
                     {estate.images.slice(1).map((img , index) => <img key={index} className='w-1/3 h-[5rem] object-cover rounded-lg' src={img} alt="" />)}
@@ -137,7 +144,7 @@ const EstatePreview = ({id}) => {
                 <div className='w-full flex gap-2 my-1'>
                     <button onClick={() => setDisplayEdit(true)} className='flex gap-3 justify-center items-center w-1/4 border-2 border-blue-400 text-blue-500  font-bold p-[6px] rounded-md'>Edit <PencilSquareIcon className='w-[1.5rem]'/> </button>
                     <button onClick={() => setDisplayDelete(true)} className='flex gap-2 justify-center items-center w-1/4 border-2 border-red-500 text-red-500 font-bold p-[6px] rounded-md'>Delete <TrashIcon className='w-[1.5rem]'/> </button>
-                    <button className='flex gap-3 justify-center items-center flex-1 border-2 border-neutral-800 text-neutral-700 font-bold p-[6px] rounded-md'>customer view <EyeIcon className='w-[1.5rem]'/> </button>
+                    <button onClick={() => router.push(`/estates/${estate.id}`)} className='flex gap-3 justify-center items-center flex-1 border-2 border-neutral-800 text-neutral-700 font-bold p-[6px] rounded-md'>customer view <EyeIcon className='w-[1.5rem]'/> </button>
                 </div>
             </div>
             {displayDelete && <DeleteModal id={id} category="estates" text="estate" display={setDisplayDelete} callback={() => console.log()}/>}
@@ -316,5 +323,3 @@ const EditMainInfosCon = ({title , desc , price , location , forRent}) => {
         </div>
     )
 }
-
-//redirect => http://localhost:3000/estates/{estate.id}

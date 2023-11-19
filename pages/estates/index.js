@@ -1,5 +1,5 @@
 import Estate from '@/components/Estate'
-import { PropertyBuiltDate, PropertyFeatures, PropertyLocation, PropertyMetrage, PropertyPrice, PropertyRooms, PropertySort, PropertyType } from '@/components/FilterAccordions'
+import { PropertyBuiltDate, PropertyFeatures, PropertyLocation, PropertyMetrage, PropertyPrice, PropertyRooms, PropertySort, PropertyStatus, PropertyType } from '@/components/FilterAccordions'
 import SideFilter from '@/components/SideFilter'
 import axios from 'axios'
 import React from 'react'
@@ -10,6 +10,7 @@ export default function Estates({estates}) {
       <main className='flex gap-4 m-[1rem] my-[2rem]'>
         <div className='h-fit sticky top-[5rem]'>
           <SideFilter>
+            <PropertyStatus/>
             <PropertyType/>
             <PropertyPrice/>
             <PropertyLocation/>

@@ -1,4 +1,5 @@
 import Achivement from '@/components/Achivement'
+import AgentsSection from '@/components/AgentsSection'
 import DocumentItem from '@/components/DocumentItem'
 import Estate from '@/components/Estate'
 import FAQ from '@/components/FAQ'
@@ -14,10 +15,10 @@ export default function Home({estates}) {
       <MainHeader/>
       <InfoBoxes/>
       <Achivement/>
-      <h3 className='text-2xl font-bold text-center mb-[3rem]'>Check out some estates</h3>
-      <section className='flex gap-4 justify-around max-w-[1400px] mx-auto my-[1rem]'>
+      <h3 className='text-2xl font-bold text-center mb-[3rem] max-sm:text-lg max-sm:mb-[1rem]'>Check out some estates</h3>
+      <section className='flex gap-4 justify-around flex-wrap max-w-[1400px] mx-auto my-[1rem] max-md:p-3'>
         {estates.map(estate => {
-          return <Estate {...estate}/>
+          return <Estate key={estate.id} {...estate}/>
         }) }
       </section>
       <Parallax/>
@@ -28,6 +29,7 @@ export default function Home({estates}) {
         <DocumentItem img="/documents/3.png"/>
         <DocumentItem img="/documents/4.png"/>
       </section>
+      <AgentsSection/>
       <h3 className='text-2xl font-bold text-center mt-[4rem]'>FAQs</h3>
       <FAQ/>
       <Services/>

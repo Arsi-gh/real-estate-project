@@ -8,24 +8,6 @@
       "isAdmin": false,
       "createdAt": "2023-10-28T17:48:06.704Z",
       "id": 1
-    },
-    {
-      "name": "ali hoseini",
-      "email": "alihoseini@gmail.com",
-      "password": "Ali_2003",
-      "passwordConfirmation": "Ali_2003",
-      "createdAt": "2023-11-06T11:23:32.716Z",
-      "isAdmin" : false,
-      "id": 2
-    },
-    {
-      "name": "kambiz mostafavi",
-      "email": "kambiz2023@gmail.com",
-      "password": "kam20_2003",
-      "passwordConfirmation": "kam20_2003",
-      "createdAt": "2023-11-06T11:24:32.548Z",
-      "isAdmin" : false,
-      "id": 3
     }
   ],
   "ESTATES": [
@@ -230,5 +212,34 @@
       ]
     }
   ],
-  "Advisors": []
+  "Advisors": [],
+  "REQUESTS": [
+    {
+      "category": "req",
+      "email": "arsalanghoochani15@gmail.com",
+      "subject": "dsa",
+      "desc": "adadasdas",
+      "asnwer_text": null,
+      "created_At": "2023-11-09T15:27:18.246Z",
+      "id": 1
+    },
+    {
+      "category": "other",
+      "email": "dasdads@gmail.com",
+      "subject": "das",
+      "desc": "dsadasd",
+      "asnwer_text": null,
+      "created_At": "2023-11-09T15:27:27.355Z",
+      "id": 2
+    },
+    {
+      "category": "req",
+      "email": "mohsen.ghoochani@gmail.com",
+      "subject": "can u please add more cases ? ",
+      "desc": "hi, my name is Mohsen. I want to rent a house between 10.000 to 25.000. I'm hoping to find a house as my first priority. please notif me if u have anything. ",
+      "asnwer_text": null,
+      "created_At": "2023-11-14T15:17:19.995Z",
+      "id": 3
+    }
+  ]
 }

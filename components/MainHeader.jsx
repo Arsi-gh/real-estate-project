@@ -47,7 +47,7 @@ const FilterEstates = () => {
   const [rent , setRent] = useState(false)
 
   return (
-    <div className="p-2 w-2/3 max-w-[1000px] rounded-lg bg-neutral-200 absolute -bottom-[35%] left-[50%] transform  -translate-x-[50%] shadow-customeThree">
+    <div className="max-lg:hidden p-2 w-2/3 max-w-[1000px] rounded-lg bg-neutral-200 absolute -bottom-[35%] left-[50%] transform  -translate-x-[50%] shadow-customeThree">
       <div className="flex rounded-t-lg overflow-hidden w-fit bg-white">
         <button onClick={() => setRent(false)} className={`p-2 px-4 outline-none ${!rent && 'bg-neutral-800 text-white font-bold '}`}>Buy estate</button>
         <button onClick={() => setRent(true)} className={`p-2 px-4 outline-none ${rent && 'bg-neutral-800 text-white font-bold '} `}>Rent estate</button>

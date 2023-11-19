@@ -1,4 +1,4 @@
-import { ComputerDesktopIcon, HomeModernIcon, PlusIcon, TicketIcon, UserIcon } from "@heroicons/react/24/outline";
+import { ComputerDesktopIcon, HomeModernIcon, PlusIcon, TicketIcon, UserIcon, UsersIcon } from "@heroicons/react/24/outline";
 import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
 
@@ -17,6 +17,7 @@ function AdminDashParts ()  {
         <Link href="/dashboard" className='p-2 py-3 hover:bg-zinc-100 flex justify-between'>Dashboard <ComputerDesktopIcon className='w-[1.5rem]'/> </Link>
         <Link href="/dashboard/users" className='p-2 py-3 border-t-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Users <UserIcon className='w-[1.5rem]'/> </Link>
         <Link href="/dashboard/estates" className='p-2 py-3 border-t-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Estates <HomeModernIcon className='w-[1.5rem]'/> </Link>
+        <Link href="/dashboard/agents" className='p-2 py-3 border-t-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Agents <UsersIcon className='w-[1.5rem]'/> </Link>
         <Link href="/dashboard/requests" className='p-2 py-3 border-t-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Requests <TicketIcon className='w-[1.5rem]'/> </Link>
       </>
     )

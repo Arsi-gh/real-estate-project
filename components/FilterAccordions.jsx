@@ -2,6 +2,23 @@ import { ChevronDownIcon, HomeModernIcon, BanknotesIcon, MapIcon, MapPinIcon, Ad
 import { BiBed } from "react-icons/bi"
 import { useState } from "react"
 
+export const PropertyStatus = () => {
+
+    const [currentStat , setCurrentStat] = useState(1)
+
+    const statusHandler = (index) => {
+        setCurrentStat(index)
+    }
+
+    return (
+        <div className="border-t-[1px] border-zinc-200 flex">
+            <button onClick={() => statusHandler(1)} className={`flex-1 p-2 ${currentStat == 1 && 'bg-zinc-100'}`}>All</button>
+            <button onClick={() => statusHandler(2)} className={`flex-1 p-2 border-x-[1px] ${currentStat == 2 && 'bg-zinc-100'}`}>Buy</button>
+            <button onClick={() => statusHandler(3)} className={`flex-1 p-2 ${currentStat == 3 && 'bg-zinc-100'}`}>Rent</button>
+        </div>
+    )
+}
+
 export const PropertyType = () => {
     const [isOpen , setIsOpen] = useState(false)
 
@@ -16,9 +33,10 @@ export const PropertyType = () => {
             </button>
             {isOpen && (
                 <ul className="pb-4">
-                    <li className="border-l-[1px] border-zinc-200 ml-5 p-2 px-4 cursor-pointer">For sale</li>
-                    <li className="border-l-[1px] border-zinc-200 ml-5 p-2 px-4 cursor-pointer">For rent</li>
-                    <li className="border-l-[1px] border-zinc-200 ml-5 p-2 px-4 cursor-pointer">For stay</li>
+                    <li className="border-l-[1px] border-zinc-200 ml-5 p-2 px-4 cursor-pointer transition-all hover:bg-zinc-100">all</li>
+                    <li className="border-l-[1px] border-zinc-200 ml-5 p-2 px-4 cursor-pointer transition-all hover:bg-zinc-100">apartment</li>
+                    <li className="border-l-[1px] border-zinc-200 ml-5 p-2 px-4 cursor-pointer transition-all hover:bg-zinc-100">house</li>
+                    <li className="border-l-[1px] border-zinc-200 ml-5 p-2 px-4 cursor-pointer transition-all hover:bg-zinc-100">commercial</li>
                 </ul>
             )}
         </div>

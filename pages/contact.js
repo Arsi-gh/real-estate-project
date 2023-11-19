@@ -1,5 +1,5 @@
+import ContactForm from '@/components/ContactForm'
 import { AtSymbolIcon, DevicePhoneMobileIcon, EnvelopeOpenIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline'
-import React from 'react'
 
 export default function Contact() {
   return (
@@ -18,27 +18,6 @@ export default function Contact() {
         </div>
     </section>
   )
-}
-
-const ContactForm = () => {
-    return (
-        <form className='flex flex-col my-4 gap-2 w-[25rem]'>
-            <h4 className='rounded-t-md flex gap-2 items-center text-white bg-neutral-800 p-2'>
-                <EnvelopeOpenIcon className='w-[2rem] p-1'/>
-                <p>Send a request</p>
-            </h4>
-            <select className='p-2 px-4 bg-zinc-50  shadow-customeOne form-select'>
-                <option value="select">select categoty</option>
-                <option value="err">Error in site</option>
-                <option value="req">Have a request</option>
-                <option value="other">other</option>
-            </select>
-            <input className='p-2 outline-neutral-600 px-4 bg-zinc-50  shadow-customeOne' type="email" placeholder='Enter your email'/>
-            <input className='p-2 outline-neutral-600 px-4 bg-zinc-50  shadow-customeOne' type="text" placeholder='Write your subject'/>
-            <textarea className='h-[10rem] p-2 outline-neutral-600 px-4 bg-zinc-50  shadow-customeOne' placeholder='Write description'></textarea>
-            <button className='bg-neutral-800 p-2 rounded-b-md text-white font-bold'>submit</button>
-        </form>
-    )
 }
 
 const ContactOptions = () => {
