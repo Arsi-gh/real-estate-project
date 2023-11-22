@@ -5,11 +5,57 @@
       "email": "arsalanghoochani15@gmail.com",
       "password": "arsi-2003",
       "passwordConfirmation": "arsi-2003",
-      "isAdmin": false,
+      "role": "ADMIN",
       "createdAt": "2023-10-28T17:48:06.704Z",
       "id": 1
+    },
+    {
+      "name": "mostaaf",
+      "email": "mosi@gmail.com",
+      "password": "2020mosi",
+      "passwordConfirmation": "2020mosi",
+      "role": "USER",
+      "createdAt": "2023-11-22T09:40:42.379Z",
+      "id": 3
+    },
+    {
+      "name": "tara salehi",
+      "email": "tara@gmail.com",
+      "password": "tara4545",
+      "passwordConfirmation": "tara4545",
+      "role": "USER",
+      "createdAt": "2023-11-22T09:41:33.980Z",
+      "id": 4
+    },
+    {
+      "name": "Arsi-gh",
+      "email": "arsi@yahoo.com",
+      "password": "arsi2020",
+      "passwordConfirmation": "arsi2020",
+      "role": "USER",
+      "createdAt": "2023-11-22T09:48:48.957Z",
+      "id": 5
+    },
+    {
+      "name": "arash saratan",
+      "email": "arashsati@gmail.com",
+      "password": "sati1010",
+      "passwordConfirmation": "sati1010",
+      "role": "USER",
+      "createdAt": "2023-11-22T09:52:01.140Z",
+      "id": 6
+    },
+    {
+      "name": "sadra mostafavi",
+      "email": "sadi@gmail.com",
+      "password": "sadsad2020",
+      "passwordConfirmation": "sadsad2020",
+      "role": "USER",
+      "createdAt": "2023-11-22T09:55:52.377Z",
+      "id": 7
     }
   ],
+  "MSG_TO_ALL_USERS": [],
   "ESTATES": [
     {
       "id": 1,
@@ -212,7 +258,10 @@
       ]
     }
   ],
-  "Advisors": [],
+  "ESTATE_COMMENTS": [],
+  "AGENTS": [],
+  "MSG_AGENT": [],
+  "MSG_TO_ALL_AGENTS": [],
   "REQUESTS": [
     {
       "category": "req",

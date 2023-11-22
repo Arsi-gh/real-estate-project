@@ -1,10 +1,13 @@
 import FiltersBackground from '@/components/FilterComponents/FiltersBackground'
+import { useUser } from '@/components/UserRoleProvider'
 import { ArrowRightOnRectangleIcon, ChevronDownIcon, ComputerDesktopIcon, HeartIcon, PlusCircleIcon, UserIcon } from '@heroicons/react/24/outline'
+import { useFormik } from 'formik'
 import Link from 'next/link'
 import { useState } from 'react'
 
 export default function NavControls({displayAddEstate}) {
 
+  const user = useUser().user
   const [dropDown , setDropDown] = useState(false)
   
   return (
@@ -17,8 +20,8 @@ export default function NavControls({displayAddEstate}) {
             <ul onClick={() => setDropDown(false)} className='z-30 flex flex-col w-[13rem] rounded-lg border-[1px] overflow-hidden absolute bg-white top-[57px] right-6'>
               <UserInfo/>
               <Link href="/dashboard" className='flex justify-between p-2 px-4 hover:bg-zinc-100 border-t-[1px] border-zinc-200'>Dashboard <ComputerDesktopIcon className='w-[1.5rem]'/> </Link>
-              <AddEstate displayAddEstate={displayAddEstate}/>
-              <UserFavorites/>
+              {(user.role === "ADMIN" || user.role === "AGENT") && <AddEstate displayAddEstate={displayAddEstate}/>}
+              {user.role === "USER" && <UserFavorites/>}
               <LogOut/>
             </ul>
           </>
@@ -53,7 +56,10 @@ const UserFavorites = () => {
 }
 
 const LogOut = () => {
+
+  const setUser = useUser().setUser
+
   return (
-    <li className='cursor-pointer flex justify-between p-2 px-4 hover:bg-zinc-100  border-t-[1px] border-zinc-200'>Log out <ArrowRightOnRectangleIcon className='w-[1.5rem]'/> </li>
+    <li onClick={() => setUser(null)} className='cursor-pointer flex justify-between p-2 px-4 hover:bg-zinc-100  border-t-[1px] border-zinc-200'>Log out <ArrowRightOnRectangleIcon className='w-[1.5rem]'/> </li>
   )
 }

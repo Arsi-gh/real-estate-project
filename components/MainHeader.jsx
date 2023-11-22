@@ -5,7 +5,7 @@ export default function MainHeader() {
   return (
     <header className="w-full relative">
       <div className="w-full bg-zinc-50 pb-12 border-b-[1px] border-zinc-200">
-        <section className=" flex items-center max-w-[1400px] m-auto">
+        <section className=" flex items-center max-w-[1400px] m-auto max-lg:flex-col-reverse">
           <MainInfos/>
           <ImageWrapper/>
         </section>
@@ -17,8 +17,8 @@ export default function MainHeader() {
 
 const MainInfos = () => {
   return (
-    <div className="w-1/2 flex flex-col p-8 gap-4 pl-8">
-      <h1 className="text-[3.8rem] font-bold ">We will help you to find your dream home</h1>
+    <div className="w-1/2 flex flex-col p-8 gap-4 pl-8 max-lg:w-full">
+      <h1 className="text-[3.8rem] font-bold max-md:text-[2.5rem]">We will help you to find your dream home</h1>
       <p className="text-lg">mehrani estate with almost 50 years of experiance in real estate</p>
       <div className="flex">
         <span className="w-[2.5rem] h-[2.5rem] bg-neutral-800 rounded-full border-2 border-white "></span>
@@ -32,10 +32,10 @@ const MainInfos = () => {
 
 const ImageWrapper = () => {
   return (
-    <div className="w-1/2 flex flex-wrap p-4 py-12 gap-4 justify-center">
-      <img className="h-[10rem] w-[8rem] rounded-md" src="header-imgs/x-1.png" alt="" />
-      <img className="h-[10rem] w-[20rem] rounded-md" src="header-imgs/x-2.png" alt="" />
-      <img className="h-[10rem] w-[8rem] rounded-md" src="header-imgs/x-3.png" alt="" />
+    <div className="w-1/2 flex flex-wrap p-4 py-12 gap-4 justify-center max-lg:w-full max-lg:flex-nowrap max-lg:overflow-x-scroll">
+      <img className="h-[10rem] w-[8rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-1.png" alt="" />
+      <img className="h-[10rem] w-[20rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-2.png" alt="" />
+      <img className="h-[10rem] w-[8rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-3.png" alt="" />
       <img className="h-[10rem] rounded-md" src="header-imgs/y-1.png" alt="" />
       <img className="h-[10rem] rounded-md" src="header-imgs/y-2.png" alt="" />
     </div>

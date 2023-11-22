@@ -1,10 +1,10 @@
-import { CalendarIcon, CreditCardIcon, ExclamationTriangleIcon, HandThumbUpIcon, HomeModernIcon, InformationCircleIcon, MapPinIcon, TrashIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { CalendarIcon, CreditCardIcon, HandThumbUpIcon, HomeModernIcon, InformationCircleIcon, MapPinIcon, TrashIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function AgentModal({setDisplay}) {
   return (
     <>
     <div onClick={() => setDisplay(false)} className='fixed top-0 left-0 w-screen h-screen z-30 bg-black opacity-30'></div>
-    <div className="max-w-[32rem] flex flex-col gap-3 fixed top-[10%] left-[50%] transform -translate-x-[50%] z-30 rounded-lg bg-white p-4">
+    <div className="max-w-[32rem] flex flex-col gap-3 fixed top-[6%] left-[50%] transform -translate-x-[50%] z-30 rounded-lg bg-white p-4">
         <div className='flex w-full justify-between items-center'>
             <h4 className='text-lg font-bold'>Agent infos</h4>
             <XMarkIcon onClick={() => setDisplay(false)} className='w-[1.8rem] cursor-pointer'/>
@@ -73,13 +73,21 @@ const FireAgentCon = () => {
     )
 }
 
-export const AgentMessageForm = () => {
+export const AgentMessageForm = ({setDisplay}) => {
     return (
-        <form>
-            <input type="text" className='p-2 px-4 rounded-md' placeholder='Title'/>
-            <textarea className='p-2 rounded-md shadow-customeOne' placeholder='Description'></textarea>
-            <button>Send message</button>
+        <>
+        <div onClick={() => setDisplay(false)} className='fixed top-0 left-0 w-screen h-screen z-30 bg-black opacity-30'></div>
+        <form className='fixed top-[50%] left-[50%] transform rounded-lg -translate-x-1/2 -translate-y-1/2 w-[30rem] p-3 bg-white flex flex-col gap-2 z-30'>
+            <div className='flex w-full justify-between items-center'>
+                <h4 className='text-lg font-bold'>Send message</h4>
+                <XMarkIcon onClick={() => setDisplay(false)} className='w-[1.8rem] cursor-pointer'/>
+            </div>
+            <span className='w-full h-[1px] bg-zinc-300 my-2'></span>
+            <input type="text" className='bg-zinc-50 p-2 px-4 rounded-md shadow-customeOne' placeholder='Title'/>
+            <textarea className='bg-zinc-50 h-[15rem] p-2 rounded-md shadow-customeOne' placeholder='Description'></textarea>
+            <button className='p-2 rounded-lg bg-neutral-800 shadow-customeFour text-white'>Send message</button>
         </form>
+        </>
     )
 }
   

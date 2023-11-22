@@ -2,8 +2,9 @@ import { EyeIcon, EyeSlashIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { PhoneIcon } from '@heroicons/react/24/solid'
 import axios from 'axios'
 import { useFormik } from 'formik'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import * as Yup from 'yup'
+import { useUser } from './UserRoleProvider'
 
 const initialValues = {
     name : "", 
@@ -20,20 +21,24 @@ const validationSchema = Yup.object({
 })
 
 const setCookie = (id) => {
-    if (!document.cookie){
+    if (!document.cookie()){
         document.cookie(`username=${id};path="/";expires=${new Date().getTime() + 2 * 24 * 60 * 60}`)
     }
 }
 
 export default function SignUpForm({displayHandler}) {
+ 
+  const setUser = useUser().setUser  
+    
   const formik = useFormik({
     initialValues,  
     onSubmit : async (values) => {
-        const res = await axios.post('http://localhost:5000/users' , {...values , isAdmin : false , createdAt : new Date().toISOString()})
+        const res = await axios.post('http://localhost:5000/users' , {...values , role : "USER" , createdAt : new Date().toISOString()})
         if (res) {
             displayHandler(false)
-            setCookie(res.data.id)
-            console.log(res)
+            // setCookie(res.data.id)
+            console.log(res.data)
+            setUser(res.data)
         }
     },
     validationSchema,
@@ -53,7 +58,7 @@ export default function SignUpForm({displayHandler}) {
             <EmailInput formik={formik} value={formik.values.email}/>
             <PassInput formik={formik} value={formik.values.password}/>
             <SecPassInput formik={formik} value={formik.values.passwordConfirmation}/>
-            <button disabled={!formik.isValid} type='submit' className={`text-white font-bold p-2 rounded-md mt-2 ${!formik.isValid ? 'bg-neutral-300' : 'bg-neutral-900'}`}>create account</button>
+            <button disabled={!formik.isValid} type='submit' className={`text-white font-bold p-3 rounded-md mt-2 shadow-customeFour ${!formik.isValid ? 'bg-neutral-300' : 'bg-neutral-900'}`}>Create account</button>
             <button className='w-fit'>Have an account ?</button>
             <span className="w-full h-[1px] bg-zinc-300"></span>
             <p>Other options : </p>
