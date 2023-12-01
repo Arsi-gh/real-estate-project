@@ -23,14 +23,14 @@ export default function Home({estates}) {
       </section>
       <Parallax/>
       <h3 className='text-2xl font-bold text-center my-[3rem]'>Some of our documents</h3>
-      <section className='flex gap-4 justify-around max-w-[1400px] mx-auto my-[2rem]'>
+      <section className='flex flex-wrap gap-4 justify-around max-w-[1400px] mx-auto my-[2rem] max-md:m-4'>
         <DocumentItem img="/documents/1.png"/>
         <DocumentItem img="/documents/2.png"/>
         <DocumentItem img="/documents/3.png"/>
         <DocumentItem img="/documents/4.png"/>
       </section>
       <AgentsSection/>
-      <h3 className='text-2xl font-bold text-center mt-[4rem]'>FAQs</h3>
+      <h3 className='text-2xl font-bold text-center mt-[4rem] max-sm:mt-[2rem]'>FAQs</h3>
       <FAQ/>
       <Services/>
     </>

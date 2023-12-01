@@ -17,7 +17,7 @@ const validationSchema = Yup.object({
     name : Yup.string().required('Please enter your name').min(6),
     email : Yup.string().email('Your email format is invalid').required('Please enter your email'),
     password : Yup.string().required('Please enter your password').min(8),
-    passwordConfirmation: Yup.string().required().oneOf([Yup.ref('password'), null], 'Passwords must match')
+    passwordConfirmation: Yup.string().required('Please repeat your password').oneOf([Yup.ref('password'), null], 'Passwords must match')
 })
 
 const setCookie = (id) => {
@@ -33,7 +33,7 @@ export default function SignUpForm({displayHandler}) {
   const formik = useFormik({
     initialValues,  
     onSubmit : async (values) => {
-        const res = await axios.post('http://localhost:5000/users' , {...values , role : "USER" , createdAt : new Date().toISOString()})
+        const res = await axios.post('http://localhost:5000/users' , {...values , role : "USER" , favorites : [] , createdAt : new Date().toISOString()})
         if (res) {
             displayHandler(false)
             // setCookie(res.data.id)
@@ -48,9 +48,9 @@ export default function SignUpForm({displayHandler}) {
   return (
     <>
         <div onClick={() => displayHandler(false)} className="z-10 fixed top-0 h-screen w-full bg-black opacity-60"></div>
-        <form onSubmit={formik.handleSubmit} className="z-20 fixed left-[50%] top-[5%] text-neutral-800 transform translate-x-[-50%] bg-white p-4 rounded-lg flex flex-col gap-y-2 w-[30rem]">
+        <form onSubmit={formik.handleSubmit} className="z-20 fixed left-[50%] sm:top-[5%] text-neutral-800 transform translate-x-[-50%] bg-white p-4 rounded-lg flex flex-col gap-y-2 w-[30rem] max-sm:w-full max-sm:bottom-0 max-sm:text-sm">
             <div className="flex justify-between">
-                <b className="text-lg">Create your account</b>
+                <b className="text-lg max-sm:text-base">Create your account</b>
                 <XMarkIcon onClick={() => displayHandler(false)} strokeWidth={2} className="w-[1.5rem] cursor-pointer"/>
             </div>
             <span className="w-full h-[1px] bg-zinc-300"></span>
@@ -62,7 +62,7 @@ export default function SignUpForm({displayHandler}) {
             <button className='w-fit'>Have an account ?</button>
             <span className="w-full h-[1px] bg-zinc-300"></span>
             <p>Other options : </p>
-            <button className="flex p-2 rounded-md bg-zinc-100 justify-between shadow-customeOne hover:bg-zinc-200">
+            <button className="flex p-2 rounded-md bg-zinc-100 justify-between items-center shadow-customeOne hover:bg-zinc-200">
                 <p>Sign up with phone number</p>
                 <PhoneIcon className="w-[1.5rem]"/>
             </button>
@@ -74,7 +74,7 @@ export default function SignUpForm({displayHandler}) {
 const NameInput = ({formik , value}) => {
     return (
         <>
-            <label className="text-lg mt-2" htmlFor="">Enter full name</label>
+            <label className="text-lg mt-2 max-sm:text-base" htmlFor="">Enter full name</label>
             <input onBlur={formik.handleBlur} value={value} onChange={formik.handleChange} className="p-2 shadow-customeOne rounded-md bg-zinc-100 outline-neutral-800" type="text" name='name' placeholder="ex : Arsalan ghoochani"/>
             {formik.errors.name && formik.touched.name && <p className='text-red-500'>{formik.errors.name}</p>}
         </>
@@ -84,7 +84,7 @@ const NameInput = ({formik , value}) => {
 const EmailInput = ({formik , value}) => {
     return (
         <>
-            <label className="text-lg mt-2" htmlFor="">Enter your email</label>
+            <label className="text-lg mt-2 max-sm:text-base" htmlFor="">Enter your email</label>
             <input onBlur={formik.handleBlur} value={value} className="p-2 shadow-customeOne rounded-md bg-zinc-100 outline-neutral-800" type="email" name='email' onChange={formik.handleChange} placeholder="ex : email@gmail.com"/>
             {formik.errors.email && formik.touched.email && <p className='text-red-500'>{formik.errors.email}</p>}
         </>
@@ -97,7 +97,7 @@ const PassInput = ({formik , value}) => {
 
     return (
         <>
-            <label className="text-lg mt-2" htmlFor="">Enter your password</label>
+            <label className="text-lg mt-2 max-sm:text-base" htmlFor="">Enter your password</label>
             <div className='w-full relative cursor-pointer'>
                 <input onBlur={formik.handleBlur} value={value} className="w-full p-2 shadow-customeOne rounded-md bg-zinc-100 outline-neutral-800" name='password' onChange={formik.handleChange} type={`${showPass ? 'text' : 'password'}`} placeholder=""/>
                 <span onClick={() => setShowPass(!showPass)} className='absolute right-2 top-[6px]'>
@@ -115,7 +115,7 @@ const SecPassInput = ({formik , value}) => {
 
     return (
         <>
-            <label className="text-lg mt-2" htmlFor="">Repeat your password</label>
+            <label className="text-lg mt-2 max-sm:text-base" htmlFor="">Repeat your password</label>
             <div className='w-full relative cursor-pointer'>
                 <input onBlur={formik.handleBlur} value={value} className="w-full p-2 shadow-customeOne rounded-md bg-zinc-100 outline-neutral-800" name='passwordConfirmation' onChange={formik.handleChange} type={`${showPass ? 'text' : 'password'}`} placeholder=""/>
                 <span onClick={() => setShowPass(!showPass)} className='absolute right-2 top-[6px]'>

@@ -5,7 +5,7 @@ import { useFormik } from 'formik'
 import Link from 'next/link'
 import { useState } from 'react'
 
-export default function NavControls({displayAddEstate}) {
+export default function NavControls({displayAddEstate , displayFavorites}) {
 
   const user = useUser().user
   const [dropDown , setDropDown] = useState(false)
@@ -21,7 +21,7 @@ export default function NavControls({displayAddEstate}) {
               <UserInfo/>
               <Link href="/dashboard" className='flex justify-between p-2 px-4 hover:bg-zinc-100 border-t-[1px] border-zinc-200'>Dashboard <ComputerDesktopIcon className='w-[1.5rem]'/> </Link>
               {(user.role === "ADMIN" || user.role === "AGENT") && <AddEstate displayAddEstate={displayAddEstate}/>}
-              {user.role === "USER" && <UserFavorites/>}
+              {user.role === "USER" && <UserFavorites displayFavorites={displayFavorites}/>}
               <LogOut/>
             </ul>
           </>
@@ -49,9 +49,9 @@ const AddEstate = ({displayAddEstate}) => {
     )
   }
   
-const UserFavorites = () => {
+const UserFavorites = ({displayFavorites}) => {
   return (
-    <li className='cursor-pointer flex justify-between p-2 px-4 hover:bg-zinc-100  border-t-[1px] border-zinc-200'>Favorites <HeartIcon className='w-[1.5rem]'/> </li>
+    <li onClick={() => displayFavorites(true)} className='cursor-pointer flex justify-between p-2 px-4 hover:bg-zinc-100  border-t-[1px] border-zinc-200'>Favorites <HeartIcon className='w-[1.5rem]'/> </li>
   )
 }
 

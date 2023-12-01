@@ -66,7 +66,7 @@ const EstateItem = ({id , title , forRent , price , images , activeEstate , togg
         <div className='bg-white p-2 pr-4 rounded-lg flex items-center justify-between gap-2 gap-x-4 shadow-customeOne'>
             <img className='w-[5rem] h-[3rem] rounded-lg shadow-customeOne object-cover' src={images[0]} alt="" />
             <span className='h-[2rem] w-[1px] bg-zinc-300'></span>
-            <p className='w-[16rem]'>{title.length > 20 ? title.slice(0 , 30) + '...' : title}</p>
+            <p className='w-[16rem] truncate'>{title}</p>
             <span className='h-[2rem] w-[1px] bg-zinc-300'></span>
             <p>{forRent ? 'for rent' : 'for sale'}</p>
             <span className='h-[2rem] w-[1px] bg-zinc-300'></span>

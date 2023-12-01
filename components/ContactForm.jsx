@@ -1,6 +1,7 @@
 import { EnvelopeOpenIcon } from "@heroicons/react/24/outline"
 import { useFormik } from "formik"
 import * as Yup from 'yup'
+import { useUser } from "./UserRoleProvider"
 
 const initialValues = {
     category : '',
@@ -18,10 +19,12 @@ const validationSchema = Yup.object({
 
 export default function ContactForm () {
 
+    const user = useUser().user
+
     const formik = useFormik({
         initialValues,
         onSubmit : async (values , actions) => {
-            const newReq = {...values , asnwer_text : null , created_At : new Date().toISOString()}
+            const newReq = {...values , from : user?.name ? user.name : 'no account' , asnwer_text : null , role : user?.role ? user.role : 'no account' , created_At : new Date().toISOString()}
             const {data} = await fetch('http://localhost:5000/requests' , {
                 method : "POST",
                 headers : {
@@ -35,7 +38,7 @@ export default function ContactForm () {
     })
 
     return (
-        <form onSubmit={formik.handleSubmit} className='flex flex-col my-4 gap-2 w-[25rem]'>
+        <form onSubmit={formik.handleSubmit} className='flex flex-col my-4 gap-2 w-[25rem] max-sm:w-full'>
             <h4 className='rounded-t-md flex gap-2 items-center text-white bg-neutral-800 p-2'>
                 <EnvelopeOpenIcon className='w-[2rem] p-1'/>
                 <p>Send a request</p>

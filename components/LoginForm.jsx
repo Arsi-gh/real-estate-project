@@ -21,11 +21,11 @@ export default function LoginForm({displayHandler}) {
   const setUser = useUser().setUser
   const handleLogin = async (email , password) => {
     const {data} = await axios.get(`http://localhost:5000/users?email=${email}&password=${password}`)
-    if (data) {
+    if (data.length) {
       setUser(data[0])
       displayHandler(false)
     } else {
-  
+      
     }
   }
 
@@ -42,7 +42,7 @@ export default function LoginForm({displayHandler}) {
   return (
     <>
         <div onClick={() => displayHandler(false)} className="z-10 fixed top-0 h-screen w-full bg-black opacity-60"></div>
-        <form onSubmit={formik.handleSubmit} className="z-20 fixed left-[50%] top-[10%] text-neutral-800 transform translate-x-[-50%] bg-white p-4 rounded-lg flex flex-col gap-y-4 w-[28rem]">
+        <form onSubmit={formik.handleSubmit} className="z-20 fixed left-[50%] sm:top-[10%] text-neutral-800 transform translate-x-[-50%] bg-white p-4 rounded-lg flex flex-col gap-y-4 w-[28rem] max-sm:w-full max-sm:bottom-0 max-sm:rounded-b-none">
             <div className="flex justify-between">
                 <b className="text-lg">Login</b>
                 <XMarkIcon onClick={() => displayHandler(false)} strokeWidth={2} className="w-[1.5rem] cursor-pointer"/>

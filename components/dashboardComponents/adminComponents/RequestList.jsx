@@ -1,6 +1,6 @@
 import SearchCom from '@/components/FilterComponents/SearchFilterCom'
 import SortCom from '@/components/FilterComponents/SortFilterCom'
-import { ChatBubbleBottomCenterTextIcon, ChatBubbleLeftRightIcon, TicketIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import {ChatBubbleLeftRightIcon, DocumentTextIcon, Squares2X2Icon, TicketIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
@@ -16,6 +16,12 @@ export default function RequestList() {
 const RequestCategory = () => {
     return (
         <div className='flex items-center gap-x-2 m-4'>
+            <b className=''>Requests : </b>
+            <button className='flex items-center gap-2 p-2 pr-4 rounded-lg bg-white border-[1px] border-zinc-300 hover:bg-neutral-800 hover:text-white group hover:shadow-none'> <Squares2X2Icon className='bg-neutral-200 w-[2rem] p-1 rounded-md group-hover:bg-white  group-hover:text-neutral-800'/> All </button>
+            <button className='flex items-center gap-2 p-2 pr-4 rounded-lg bg-white border-[1px] border-zinc-300 hover:bg-neutral-800 hover:text-white group hover:shadow-none'> <DocumentTextIcon className='bg-neutral-200 w-[2rem] p-1 rounded-md group-hover:bg-white  group-hover:text-neutral-800'/> Agents </button>
+            <button className='flex items-center gap-2 p-2 pr-4 rounded-lg bg-white border-[1px] border-zinc-300 hover:bg-neutral-800 hover:text-white group hover:shadow-none'> <DocumentTextIcon className='bg-neutral-200 w-[2rem] p-1 rounded-md group-hover:bg-white  group-hover:text-neutral-800'/> Users </button>
+            <span className='flex-1'></span>
+            <b className=''>Filter : </b>
             <SortCom/>
             <SearchCom/>
         </div>
@@ -62,7 +68,7 @@ const Request = ({id , category , email , created_At , subject , displayReq , ch
     
     return (
         <div className='w-full p-2 flex items-center gap-3 rounded-lg shadow-customeOne bg-white'>
-            <p className='flex gap-2 items-center w-[15rem]'> <TicketIcon className='w-[1.5rem]'/> <b>Title : </b>{subject.length > 20 ? subject.slice(0 , 18) + '...' : subject}</p>
+            <p className='flex gap-2 items-center w-[15rem] truncate'> <TicketIcon className='w-[1.5rem]'/> <b>Title : </b>{subject}</p>
             <span className='h-[1.5rem] w-[1px] bg-zinc-300'></span>
             <p className='text-red-500 w-[8rem]'><b className='text-neutral-800'>Category : </b>{category}</p>
             <span className='h-[1.5rem] w-[1px] bg-zinc-300'></span>
@@ -106,6 +112,8 @@ const RequestModal = ({id , displayReq}) => {
                 <div className='flex-1 flex flex-col gap-3'>
                     <p className='text-lg'><b>Title : </b>{req.subject}</p>
                     <p><b>Category : </b>{req.category}</p>
+                    <p><b>From : </b> {req.from} </p>
+                    <p><b>Autherization : </b> {req.role} </p>
                     <p className='p-2 rounded-lg bg-zinc-50 shadow-customeOne max-h-[12rem] overflow-scroll'><b>Description : </b>{req.desc}</p>
                     <p><b>Created at : </b>{req.created_At.slice(0 , 10)}</p>
                     <p><b>Email : </b>{req.email}</p>

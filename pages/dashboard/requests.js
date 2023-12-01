@@ -1,4 +1,3 @@
-import EsateteList from '@/components/dashboardComponents/adminComponents/EsateteList'
 import RequestList from '@/components/dashboardComponents/adminComponents/RequestList'
 import DashLayout from '@/components/dashboardComponents/globalUsage/DashLayout'
 import React from 'react'

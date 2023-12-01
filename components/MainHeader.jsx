@@ -32,10 +32,10 @@ const MainInfos = () => {
 
 const ImageWrapper = () => {
   return (
-    <div className="w-1/2 flex flex-wrap p-4 py-12 gap-4 justify-center max-lg:w-full max-lg:flex-nowrap max-lg:overflow-x-scroll">
-      <img className="h-[10rem] w-[8rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-1.png" alt="" />
-      <img className="h-[10rem] w-[20rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-2.png" alt="" />
-      <img className="h-[10rem] w-[8rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-3.png" alt="" />
+    <div className="w-1/2 flex flex-wrap p-4 py-12 gap-4 justify-center max-lg:w-full max-lg:flex-nowrap max-lg:overflow-scroll">
+      <img className="h-[10rem] min-w-[8rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-1.png" alt="" />
+      <img className="h-[10rem] min-w-[20rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-2.png" alt="" />
+      <img className="h-[10rem] min-w-[8rem] rounded-md max-md:w-[2rem]" src="header-imgs/x-3.png" alt="" />
       <img className="h-[10rem] rounded-md" src="header-imgs/y-1.png" alt="" />
       <img className="h-[10rem] rounded-md" src="header-imgs/y-2.png" alt="" />
     </div>

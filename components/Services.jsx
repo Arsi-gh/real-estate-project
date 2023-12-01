@@ -2,7 +2,7 @@ import { ArrowPathIcon, ClipboardDocumentIcon, ClipboardDocumentListIcon, CubeTr
 
 export default function Services() {
   return (
-    <section className="max-w-[1400px] min-h-[10rem] items-center m-auto flex my-[10rem] px-32 max-md:flex-col">
+    <section className="max-w-[1400px] min-h-[10rem] items-center m-auto flex my-[10rem] px-32 max-md:flex-col max-sm:my-[3rem]">
         <div className="min-w-[25rem] flex items-center justify-center relative">
             <p className="text-[3rem] font-semibold z-10 bg-white max-sm:text-3xl">Our servise</p>
             <ArrowPathIcon className="absolute -left-[10%] bottom-[40%] w-[5rem] h-[5rem] p-6 rounded-lg text-neutral-700 bg-white shadow-customeThree max-sm:hidden"/>
