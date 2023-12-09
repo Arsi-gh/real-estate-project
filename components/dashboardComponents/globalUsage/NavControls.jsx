@@ -1,7 +1,6 @@
 import FiltersBackground from '@/components/FilterComponents/FiltersBackground'
 import { useUser } from '@/components/UserRoleProvider'
 import { ArrowRightOnRectangleIcon, ChevronDownIcon, ComputerDesktopIcon, HeartIcon, PlusCircleIcon, UserIcon } from '@heroicons/react/24/outline'
-import { useFormik } from 'formik'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -32,12 +31,15 @@ export default function NavControls({displayAddEstate , displayFavorites}) {
 }
 
 const UserInfo = () => {
+
+  const user = useUser().user
+
   return (
     <li className='flex p-2 gap-2 items-center cursor-default'>
       <UserIcon className='w-[3rem] p-2 rounded-full border-2'/>
       <span>
-        <p className='text-sm'>Arsalan ghoochani</p>
-        <p className='text-sm'>09136955525</p>
+        <p className='text-sm truncate w-[8rem]'>{user.name}</p>
+        <p className='text-sm truncate w-[8rem]'>{user.email}</p>
       </span>
     </li>
   )

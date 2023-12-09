@@ -2,6 +2,7 @@ import { TrashIcon, XMarkIcon } from "@heroicons/react/24/outline"
 import { useEffect } from "react"
 import { useUser } from "./UserRoleProvider"
 import Link from "next/link"
+import axios from "axios"
 
 export default function FavoritesModal({displayHandler}) {
   return (
@@ -36,8 +37,12 @@ const Favorites = ({displayHandler}) => {
 
 const FavoriteItem = ({estateId , images , forRent , title , price , displayHandler}) => {
 
-    const deleteHandler = () => {
-        
+    const user = useUser().user
+
+    const deleteHandler = async (e) => {
+        e.preventDefault()
+        user.favorites = user.favorites.filter((item) => item.estateId != estateId)
+        const {data} = await axios.put('http://localhost:5000/users/' + user.id , user)
     }
 
     return (
@@ -45,7 +50,7 @@ const FavoriteItem = ({estateId , images , forRent , title , price , displayHand
             <img className="w-[6rem] h-[4rem] rounded-lg" src={images[0]} alt="" />
             <p className="w-[23rem] truncate">{title}</p>
             <b className="text-green-500 w-[10rem]">{price}$ {forRent && 'monthly'}</b>
-            <TrashIcon className="w-[1.8rem] cursor-pointer text-red-500"/>
+            <TrashIcon onClick={(e) => deleteHandler(e)} className="w-[1.8rem] cursor-pointer text-red-500"/>
         </Link>
     )
 }

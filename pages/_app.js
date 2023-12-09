@@ -6,6 +6,7 @@ import Nav from '@/components/Nav'
 import SignUpForm from '@/components/SignUpForm'
 import UserProvider from '@/components/UserRoleProvider'
 import AddEstateForm from '@/components/dashboardComponents/globalUsage/AddEstateForm'
+import AgentReqForm from '@/components/dashboardComponents/globalUsage/AgentReqForm'
 import '@/styles/globals.css'
 import { useState } from 'react'
 
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
   const [displayLogin , setDisplayLogin] = useState(false)
   const [displaySignUp , setDisplaySignUp] = useState(false)
   const [displayAddEstate , setDisplayAddEstate] = useState(false)
+  const [displayAgentReq, setDisplayAgentReq] = useState(false)
   const [displayFavorites , setDisplayFavorites] = useState(false)
 
   return (
@@ -25,7 +27,7 @@ export default function App({ Component, pageProps }) {
     {displayLogin && <LoginForm displayHandler={setDisplayLogin}/>}
     {displaySignUp && <SignUpForm displayHandler={setDisplaySignUp}/>}
     {displayAddEstate && <AddEstateForm displayHandler={setDisplayAddEstate}/>}
-    {/* <AgentReqForm/> */}
+    {displayAgentReq && <AgentReqForm displayHandler={setDisplayAgentReq}/> }
     {displayFavorites && <FavoritesModal displayHandler={setDisplayFavorites}/>}
   </UserProvider>
   )

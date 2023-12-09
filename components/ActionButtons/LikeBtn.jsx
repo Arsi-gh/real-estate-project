@@ -3,6 +3,7 @@ import { useUser } from "../UserRoleProvider";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+
 export default function LikeBtn({id}) {
   
   const user = useUser().user
@@ -16,19 +17,33 @@ export default function LikeBtn({id}) {
     }
   }
 
+  const addFavorite = async () => {
+    const {data} = await axios.get('http://localhost:5000/estates/' + id)
+    const { title , location , images  , forRent , price , id : estateId  } = data
+    let favEstate = {title , images , location , forRent , price , estateId}
+    user.favorites.push(favEstate)
+    await axios.put('http://localhost:5000/users/' + user.id , user)
+    setIsAdded(true)
+  }
+
+  const removeFavorite = async () => {
+    user.favorites = user.favorites.filter((item) => item.estateId != id)
+    const {data} = await axios.put('http://localhost:5000/users/' + user.id , user)
+    setIsAdded(false)
+  }
+
   useEffect(() => {
     checkIn(id)
   } , [])
 
-  const clickHandler = async ()  => {
+  const clickHandler = ()  => {
     if (!user) return console.log('log in first')
     if (user.role === "USER") {
-        const {data} = await axios.get('http://localhost:5000/estates/' + id)
-        const { title , location , images  , forRent , price , id : estateId  } = data
-        let favEstate = {title , images , location , forRent , price , estateId}
-        user.favorites.push(favEstate)
-        await axios.put('http://localhost:5000/users/' + user.id , user)
-        setIsAdded(true)
+        if (isAdded) {
+          removeFavorite()
+        } else {
+          addFavorite()
+        }
     }
   }
 

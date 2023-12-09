@@ -20,7 +20,7 @@ export default function AddEstateForm({displayHandler}) {
   return (
     <>
       <div onClick={(e) => toggleDisplay(e)} className="w-screen h-screen z-20 bg-black opacity-70 fixed top-0 left-0"></div>
-      <form className="bg-white w-[40rem]  p-4 flex flex-col gap-2 gap-y-4 fixed top-[3%] left-[50%] transform -translate-x-[50%] rounded-lg z-30 shadow-customeFour">
+      <form className="bg-white w-[40rem]  p-4 flex flex-col gap-2 gap-y-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg z-30 shadow-customeFour">
           <div className="flex w-full justify-between items-center">
             <h3 className="text-xl font-bold">Import new estate</h3>
             <XMarkIcon onClick={(e) => toggleDisplay(e)} className="w-[1.8rem] cursor-pointer"/>
