@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
   return (
     <>
-    <div className='max-w-[1400px] m-auto flex gap-4 p-4 my-[3rem] max-xl:flex-col-reverse'>
+    <div style={{maxWidth : '1400px'}} className='m-auto flex gap-4 p-4 my-12 max-xl:flex-col-reverse'>
         <img className='w-1/2 rounded-lg shadow-customeThree max-xl:w-full' src="/about-pic.png" alt="" />
         <div className='w-1/2 text-lg text-justify flex gap-4 flex-col max-xl:w-full max-sm:text-sm'>
             <h3 className='text-2xl font-bold max-sm:text-lg'>Mehrani estates</h3>
@@ -22,7 +22,7 @@ export default function About() {
 
 const ExpertsCon = () => {
     return (
-        <div className='max-w-[1400px] m-auto p-4 my-[2rem] flex justify-around gap-6 max-md:flex-wrap'>
+        <div style={{maxWidth : '1400px'}} className='m-auto p-4 my-8 flex justify-around gap-6 max-md:flex-wrap'>
             <ExpertCard position="Expert" img="/portraits/4.png"/>
             <ExpertCard position="CEO" img="/portraits/2.png"/>
             <ExpertCard position="MA" img="/portraits/1.png"/>
@@ -32,7 +32,7 @@ const ExpertsCon = () => {
 
 const ExpertCard = ({img , position}) => {
     return (
-        <div className='w-[25rem] h-[25rem] rounded-lg overflow-hidden shadow-customeOne relative max-sm:w-full max-sm:text-sm max-sm:h-auto'>
+        <div style={{width : "25rem" , height : "25rem"}} className='rounded-lg overflow-hidden shadow-customeOne relative max-sm:w-full max-sm:text-sm max-sm:h-auto'>
             <img className='w-full h-full object-cover' src={img} alt="" />
             <p className='p-2 text-justify absolute bottom-0 z-10 bg-white/90 filter backdrop-opacity-20'>Lorem ipsum dolor sit amet consectetur addol enim quaerat numquam. Illum aut corrupti quas. Dolore tenetur excepturi adipisci . <b>{position}</b></p>
         </div>

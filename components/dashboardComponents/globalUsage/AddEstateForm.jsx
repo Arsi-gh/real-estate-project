@@ -20,12 +20,12 @@ export default function AddEstateForm({displayHandler}) {
   return (
     <>
       <div onClick={(e) => toggleDisplay(e)} className="w-screen h-screen z-20 bg-black opacity-70 fixed top-0 left-0"></div>
-      <form className="bg-white w-[40rem]  p-4 flex flex-col gap-2 gap-y-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg z-30 shadow-customeFour">
+      <form style={{width : '40rem'}} className="bg-white p-4 flex flex-col gap-2 gap-y-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg z-30 shadow-customeFour">
           <div className="flex w-full justify-between items-center">
             <h3 className="text-xl font-bold">Import new estate</h3>
-            <XMarkIcon onClick={(e) => toggleDisplay(e)} className="w-[1.8rem] cursor-pointer"/>
+            <XMarkIcon onClick={(e) => toggleDisplay(e)} className="w-7 cursor-pointer"/>
           </div>
-          <span className="my-2 w-full h-[1px] bg-zinc-300"></span>
+          <span style={{height : '1px'}} className="my-2 w-full bg-zinc-300"></span>
           {estatesParts[currentPart]}
           <FormControls currentPart={currentPart} hadleParts={setCurrentPart}/>
       </form>
@@ -40,10 +40,10 @@ const EstateFirstPart = () => {
       <PartsCon><EstateTitle/></PartsCon>
       <PartsCon><EstateLocation/></PartsCon>
       <PartsCon><EstateStatus/><EstatePrice/></PartsCon>
-      <span className="my-2 w-full h-[1px] bg-zinc-300"></span>
+      <span style={{height : '1px'}} className="my-2 w-full bg-zinc-300"></span>
       <h3 className="font-bold">Features : </h3>
       <EstateProperties/>
-      <span className="my-2 w-full h-[1px] bg-zinc-300"></span>
+      <span style={{height : '1px'}} className="my-2 w-full bg-zinc-300"></span>
       <h3 className="font-bold">Amentities : </h3>
       <EstateAmentities/>
     </>
@@ -105,34 +105,34 @@ const EstatePrice = () => {
 const EstateProperties = () => {
   return (
     <div className="flex flex-wrap gap-3 justify-between">
-      <span className="w-[31.5%] justify-between flex gap-2 items-center">
-        <input type="number" className="w-[3rem] p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
-        <BiBed className="text-[1.5rem]"/>
+      <span style={{width : '31.5%'}} className="justify-between flex gap-2 items-center">
+        <input type="number" className="w-12 p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
+        <BiBed className="text-lg"/>
         <p className="flex-1">Bedrooms</p>
       </span>
-      <span className="w-[31.5%] justify-between flex gap-2 items-center">
-        <input type="number" className="w-[3rem] p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
-        <BiBath className="text-[1.5rem]"/>
+      <span style={{width : '31.5%'}} className="justify-between flex gap-2 items-center">
+        <input type="number" className="w-12 p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
+        <BiBath className="text-lg"/>
         <p className="flex-1">Bethrooms</p>
       </span>
-      <span className="w-[31.5%] justify-between flex gap-2 items-center">
-        <input type="number" className="w-[3rem] p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
-        <PiGarageDuotone className="text-[1.5rem]"/>
+      <span style={{width : '31.5%'}} className="justify-between flex gap-2 items-center">
+        <input type="number" className="w-12 p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
+        <PiGarageDuotone className="text-lg"/>
         <p className="flex-1">Indoor garage</p>
       </span>
-      <span className="w-[31.5%] justify-between flex gap-2 items-center">
-        <input type="number" className="w-[3rem] p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
-        <MdOutlinePhotoSizeSelectSmall className="text-[1.5rem]"/>
+      <span style={{width : '31.5%'}} className="justify-between flex gap-2 items-center">
+        <input type="number" className="w-12 p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
+        <MdOutlinePhotoSizeSelectSmall className="text-lg"/>
         <p className="flex-1">Size</p>
       </span>
-      <span className="w-[31.5%] justify-between flex gap-2 items-center">
-        <input type="number" className="w-[3rem] p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
-        <BiCalendar className="text-[1.5rem]"/>
+      <span style={{width : '31.5%'}} className="justify-between flex gap-2 items-center">
+        <input type="number" className="w-12 p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
+        <BiCalendar className="text-lg"/>
         <p className="flex-1">Built in</p>
       </span>
-      <span className="w-[31.5%] justify-between flex gap-2 items-center">
-        <input type="number" className="w-[3rem] p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
-        <TbBed className="text-[1.5rem]"/>
+      <span style={{width : '31.5%'}} className="justify-between flex gap-2 items-center">
+        <input type="number" className="w-12 p-2 shadow-customeOne bg-zinc-100 outline-neutral-800 rounded-md"/>
+        <TbBed className="text-lg"/>
         <p className="flex-1">Guest room</p>
       </span>
     </div>
@@ -143,32 +143,32 @@ const EstateAmentities = () => {
   return (
     <div className="flex flex-wrap gap-3">
       <label htmlFor="wifi" className="cursor-pointer p-2 px-3 rounded-md flex items-center gap-2 bg-zinc-100 shadow-customeOne">
-        <WifiIcon className="w-[1.5rem]"/>
+        <WifiIcon className="w-6"/>
         <p>High wifi speed</p>
         <input id="wifi" type="checkbox" />
       </label>
       <label htmlFor="smart" className="cursor-pointer p-2 px-3 rounded-md flex items-center gap-2 bg-zinc-100 shadow-customeOne">
-        <CpuChipIcon className="w-[1.5rem]"/>
+        <CpuChipIcon className="w-6"/>
         <p>Smart tech</p>
         <input id="smart" type="checkbox" />
       </label>
       <label htmlFor="secure" className="cursor-pointer p-2 px-3 rounded-md flex items-center gap-2 bg-zinc-100 shadow-customeOne">
-        <LockClosedIcon className="w-[1.5rem]"/>
+        <LockClosedIcon className="w-6"/>
         <p>Lock and secure</p>
         <input id="secure" type="checkbox" />
       </label>
       <label htmlFor="theater" className="cursor-pointer p-2 px-3 rounded-md flex items-center gap-2 bg-zinc-100 shadow-customeOne">
-        <FilmIcon className="w-[1.5rem]"/>
+        <FilmIcon className="w-6"/>
         <p>movie theater</p>
         <input id="theater" type="checkbox" />
       </label>
       <label htmlFor="mall" className="cursor-pointer p-2 px-3 rounded-md flex items-center gap-2 bg-zinc-100 shadow-customeOne">
-        <ShoppingCartIcon className="w-[1.5rem]"/>
+        <ShoppingCartIcon className="w-6"/>
         <p>Shopping mall</p>
         <input id="mall" type="checkbox" />
       </label>
       <label htmlFor="repaire" className="cursor-pointer p-2 px-3 rounded-md flex items-center gap-2 bg-zinc-100 shadow-customeOne">
-        <WrenchScrewdriverIcon className="w-[1.5rem]"/>
+        <WrenchScrewdriverIcon className="w-6"/>
         <p>Free repair service</p>
         <input id="repaire" type="checkbox" />
       </label>
@@ -180,7 +180,7 @@ const EstateDesc = () => {
   return(
     <>
       <h3 className="text-lg font-bold">Description</h3>
-      <textarea className="h-[10rem] p-2 text-lg rounded-lg bg-zinc-100 shadow-customeOne outline-neutral-800"></textarea>
+      <textarea className="h-40 p-2 text-lg rounded-lg bg-zinc-100 shadow-customeOne outline-neutral-800"></textarea>
     </>
   )
 }
@@ -191,14 +191,14 @@ const EstateImages = () => {
       <h3 className="text-lg font-bold">Images : </h3>
       <input id="images" className="hidden" type="file" />
       <div className="w-full flex flex-wrap gap-3">
-        <div className="grid place-items-center w-[49%] h-[7rem] bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-[5rem] text-neutral-400"/></div>
-        <div className="grid place-items-center w-[49%] h-[7rem] bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-[5rem] text-neutral-400"/></div>
-        <div className="grid place-items-center w-[49%] h-[7rem] bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-[5rem] text-neutral-400"/></div>
-        <div className="grid place-items-center w-[49%] h-[7rem] bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-[5rem] text-neutral-400"/></div>
+        <div style={{width : '49%'}} className="grid place-items-center h-28 bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-20 text-neutral-400"/></div>
+        <div style={{width : '49%'}} className="grid place-items-center h-28 bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-20 text-neutral-400"/></div>
+        <div style={{width : '49%'}} className="grid place-items-center h-28 bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-20 text-neutral-400"/></div>
+        <div style={{width : '49%'}} className="grid place-items-center h-28 bg-zinc-100 rounded-lg shadow-customeOne"><PhotoIcon className="w-20 text-neutral-400"/></div>
       </div>
       <label className="flex justify-between items-center p-2 pr-4 rounded-lg  bg-zinc-100 cursor-pointer border-2 border-zinc-400 border-dashed hover:bg-zinc-200" htmlFor="images">
         <p>Upload images</p>
-        <CloudArrowUpIcon className="w-[2rem]"/>
+        <CloudArrowUpIcon className="w-8"/>
       </label>
     </>
   )

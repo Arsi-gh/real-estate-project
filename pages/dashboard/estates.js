@@ -1,10 +1,10 @@
-import EsateteList from '@/components/dashboardComponents/adminComponents/EsateteList'
+import EstateList from '@/components/dashboardComponents/adminComponents/EstateList'
 import DashLayout from '@/components/dashboardComponents/globalUsage/DashLayout'
 
 export default function Estates() {
   return (
     <DashLayout>
-        <EsateteList/>
+        <EstateList/>
     </DashLayout>
   )
 }

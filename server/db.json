@@ -145,50 +145,40 @@
       ],
       "createdAt": "2023-12-06T21:34:31.344Z",
       "id": 9
+    },
+    {
+      "name": "akbar mashala",
+      "email": "akabari@gmail.com",
+      "password": "akbar-2202",
+      "passwordConfirmation": "akbar-2202",
+      "role": "USER",
+      "favorites": [],
+      "createdAt": "2023-12-12T10:14:31.049Z",
+      "id": 10
+    },
+    {
+      "name": "mostafa alinezhad ",
+      "email": "mosi-ezhi@gmail.com",
+      "password": "mosi2022",
+      "passwordConfirmation": "mosi2022",
+      "role": "USER",
+      "favorites": [],
+      "createdAt": "2023-12-12T10:15:23.118Z",
+      "id": 11
+    },
+    {
+      "name": "Arsalan-labmo",
+      "email": "lambo@gmail.com",
+      "password": "lambo2024",
+      "passwordConfirmation": "lambo2024",
+      "role": "USER",
+      "favorites": [],
+      "createdAt": "2023-12-12T10:16:12.450Z",
+      "id": 12
     }
   ],
   "MSG_TO_ALL_USERS": [],
   "ESTATES": [
-    {
-      "id": 1,
-      "title": "Modern 2-bedroom apartment in los angles",
-      "location": "USA , Los angles",
-      "typeIcon": "",
-      "type": "house",
-      "forRent": false,
-      "price": "5.000.000",
-      "rooms": 3,
-      "guestrooms": 1,
-      "bathrooms": 2,
-      "size": 600,
-      "built_date": 2020,
-      "garage": 2,
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
-      "images": [
-        "/header-imgs/y-1.png",
-        "/header-imgs/y-2.png",
-        "/estate-page/1.png",
-        "/estate-page/2.png"
-      ],
-      "amentities": [
-        {
-          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
-          "desc": "Secure entry and concierge service for yoyr peace of mind"
-        },
-        {
-          "icon": "",
-          "desc": "High speed internet connectivity to meet your digitial needs"
-        },
-        {
-          "icon": "",
-          "desc": "Smart features and equipments for creating a relaxing home"
-        },
-        {
-          "icon": "",
-          "desc": "Movie theater subscription in top floor for creating an amazing night"
-        }
-      ]
-    },
     {
       "id": 2,
       "title": "Modern 1-bedroom apartment in los santos",
@@ -212,7 +202,6 @@
       ],
       "amentities": [
         {
-          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
           "desc": "Secure entry and concierge service for yoyr peace of mind"
         },
         {
@@ -252,7 +241,6 @@
       ],
       "amentities": [
         {
-          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
           "desc": "Secure entry and concierge service for yoyr peace of mind"
         },
         {
@@ -292,7 +280,6 @@
       ],
       "amentities": [
         {
-          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
           "desc": "Secure entry and concierge service for yoyr peace of mind"
         },
         {
@@ -332,7 +319,201 @@
       ],
       "amentities": [
         {
-          "icon": "<FingerPrintIcon className=\"w-[2.5rem]\"/>",
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Modern 3-bedroom apartment in florida",
+      "location": "USA , florida",
+      "typeIcon": "",
+      "type": "apartment",
+      "forRent": true,
+      "price": "8.000",
+      "rooms": 3,
+      "guestrooms": 0,
+      "bathrooms": 2,
+      "size": 220,
+      "built_date": 2023,
+      "garage": 2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/5.png",
+        "/estates-imgs/7.png",
+        "/estates-imgs/2.png",
+        "/estates-imgs/10.png"
+      ],
+      "amentities": [
+        {
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Modern 3-bedroom apartment in florida",
+      "location": "USA , florida",
+      "typeIcon": "",
+      "type": "apartment",
+      "forRent": true,
+      "price": "8.000",
+      "rooms": 3,
+      "guestrooms": 0,
+      "bathrooms": 2,
+      "size": 220,
+      "built_date": 2023,
+      "garage": 2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/1.png",
+        "/estates-imgs/10.png",
+        "/estates-imgs/11.png",
+        "/estates-imgs/9.png"
+      ],
+      "amentities": [
+        {
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Modern 5-bedroom house in washangton",
+      "location": "USA , washangton",
+      "typeIcon": "",
+      "type": "house",
+      "forRent": false,
+      "price": "8.000.000",
+      "rooms": 4,
+      "guestrooms": 1,
+      "bathrooms": 3,
+      "size": 420,
+      "built_date": 2023,
+      "garage": 2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/11.png",
+        "/estates-imgs/9.png",
+        "/estates-imgs/2.png",
+        "/estates-imgs/13.png"
+      ],
+      "amentities": [
+        {
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Modern 3-bedroom apartment in florida",
+      "location": "USA , florida",
+      "typeIcon": "",
+      "type": "apartment",
+      "forRent": true,
+      "price": "8.000",
+      "rooms": 3,
+      "guestrooms": 0,
+      "bathrooms": 2,
+      "size": 220,
+      "built_date": 2023,
+      "garage": 2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/2.png",
+        "/estates-imgs/12.png",
+        "/estates-imgs/13.png",
+        "/estates-imgs/10.png"
+      ],
+      "amentities": [
+        {
+          "desc": "Secure entry and concierge service for yoyr peace of mind"
+        },
+        {
+          "icon": "",
+          "desc": "High speed internet connectivity to meet your digitial needs"
+        },
+        {
+          "icon": "",
+          "desc": "Smart features and equipments for creating a relaxing home"
+        },
+        {
+          "icon": "",
+          "desc": "Movie theater subscription in top floor for creating an amazing night"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Modern 3-bedroom apartment in florida",
+      "location": "USA , florida",
+      "typeIcon": "",
+      "type": "apartment",
+      "forRent": true,
+      "price": "8.000",
+      "rooms": 3,
+      "guestrooms": 0,
+      "bathrooms": 2,
+      "size": 220,
+      "built_date": 2023,
+      "garage": 2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatibus, vel nostrum recusandae repellendus quidem illo dolore est! Voluptatibus vero minus nesciunt at porro nostrum, repellendus iusto voluptatem eum. Qui est quasi earum quis mascipit consectetur eque maiores dignissimos rem? Sit ab expedita suscipit qui alias veniam eveniet nihil cum eum. A officia qui incidunt! Deleniti alias latate eius quod, mollitia accusamus. Praesentium, laborum amet voluptas facere esse quaerat quia obcaecati nesciunt quae veritatis libero sed corrupti officiis vitae. Corporis veritatis adipisci fugit recusandae maxime deserunt asperiores et doloremque voluptatibus aut tenetur error mollitia est nisi cupiditate impedit velit, vero deleniti inventore. Est reprehenderit dolorum necessitatibus natus aliquam aperiam?",
+      "images": [
+        "/estates-imgs/11.png",
+        "/estates-imgs/9.png",
+        "/estates-imgs/2.png",
+        "/estates-imgs/10.png"
+      ],
+      "amentities": [
+        {
           "desc": "Secure entry and concierge service for yoyr peace of mind"
         },
         {

@@ -8,7 +8,7 @@ import Link from 'next/link'
 export default function FooterPart() {
   return (
     <footer className='w-full bg-neutral-900 text-white text-lg relative'>
-        <div className='max-w-[1400px] m-auto flex flex-wrap px-8 py-6 items-start justify-between gap-y-4'>
+        <div style={{maxWidth : '1500px'}} className='m-auto flex flex-wrap px-8 py-6 items-start justify-between gap-y-4'>
             <ul className='flex flex-col max-sm:text-sm'>
                 <h3 className='flex gap-2 m-3 ml-0 items-center font-semibold text-2xl max-sm:text-lg'>
                     <HiOutlineDocumentText/>
@@ -52,8 +52,8 @@ export default function FooterPart() {
             <div className='max-sm:w-full'>
                 <h3 className='font-semibold text-2xl m-3 ml-0 max-sm:text-lg'>Subscibe to news</h3>
                 <div className='flex gap-1 mt-4 max-sm:w-full max-sm:mx-auto'>
-                    <input className='px-4 p-2 rounded-l-lg outline-none bg-zinc-100 text-neutral-700 max-sm:w-[80%]' placeholder='Email' type="email" />
-                    <button className='flex gap-2 items-center p-1 pl-2 rounded-r-lg font-bold bg-white text-neutral-800 max-sm:text-sm'> <p className='max-sm:hidden'>Send</p>  <PaperAirplaneIcon className='w-[2.4rem] rounded-lg p-2 bg-neutral-800 text-white max-sm:w-[2rem] max-sm:p-1 max-sm:text-neutral-800 max-sm:bg-white'/> </button>
+                    <input className='px-4 p-2 rounded-l-lg outline-none bg-zinc-100 text-neutral-700 max-sm:w-4/5' placeholder='Email' type="email" />
+                    <button className='flex gap-2 items-center p-1 pl-2 rounded-r-lg font-bold bg-white text-neutral-800 max-sm:text-sm'> <p className='max-sm:hidden'>Send</p>  <PaperAirplaneIcon className='w-10 rounded-lg p-2 bg-neutral-800 text-white max-sm:w-8 max-sm:p-1 max-sm:text-neutral-800 max-sm:bg-white'/> </button>
                 </div>
             </div>
         </div>

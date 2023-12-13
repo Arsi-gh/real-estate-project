@@ -35,12 +35,13 @@ export default function ContactForm () {
             actions.resetForm()
         },
         validationSchema,
+        validateOnMount : true,
     })
 
     return (
-        <form onSubmit={formik.handleSubmit} className='flex flex-col my-4 gap-2 w-[25rem] max-sm:w-full'>
+        <form onSubmit={formik.handleSubmit} className='flex flex-col my-4 gap-2 w-96 max-sm:w-full'>
             <h4 className='rounded-t-md flex gap-2 items-center text-white bg-neutral-800 p-2'>
-                <EnvelopeOpenIcon className='w-[2rem] p-1'/>
+                <EnvelopeOpenIcon className='w-8 p-1'/>
                 <p>Send a request</p>
             </h4>
             <select value={formik.values.category} onChange={formik.handleChange} name="category" className='p-2 px-4 bg-zinc-50  shadow-customeOne form-select'>
@@ -51,8 +52,8 @@ export default function ContactForm () {
             </select>
             <input value={formik.values.email} onChange={formik.handleChange} name="email" className='p-2 outline-neutral-600 px-4 bg-zinc-50  shadow-customeOne' type="email" placeholder='Enter your email'/>
             <input value={formik.values.subject} onChange={formik.handleChange} name="subject" className='p-2 outline-neutral-600 px-4 bg-zinc-50  shadow-customeOne' type="text" placeholder='Write your subject'/>
-            <textarea value={formik.values.desc} onChange={formik.handleChange} name="desc" className='h-[10rem] p-2 outline-neutral-600 px-4 bg-zinc-50  shadow-customeOne' placeholder='Write description'></textarea>
-            <button type="submit" className='bg-neutral-800 p-2 rounded-b-md text-white font-bold'>submit</button>
+            <textarea value={formik.values.desc} onChange={formik.handleChange} name="desc" className='h-40 p-2 outline-neutral-600 px-4 bg-zinc-50  shadow-customeOne' placeholder='Write description'></textarea>
+            <button disabled={!formik.isValid} type="submit" className={`${!formik.isValid ? 'bg-neutral-300' : 'bg-neutral-800'} p-2 rounded-b-md text-white font-bold`}>submit</button>
         </form>
     )
 }

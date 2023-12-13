@@ -16,10 +16,10 @@ export default function DashSide() {
   }
 
   if (user) return (
-    <ul className='h-fit rounded-lg overflow-hidden cursor-pointer min-w-[15rem] border-[1px] border-zinc-300'>
+    <ul style={{minWidth : '15rem'}} className='h-fit rounded-lg overflow-hidden cursor-pointer shadow-customeOne border-zinc-300'>
       {user.role === "ADMIN" && <AdminParts/>}
       {user.role === "AGENT" && <AgentParts/>}
-      <li onClick={logOutFn} className='p-2 hover:bg-zinc-100 flex justify-between'>Log out <ArrowRightOnRectangleIcon className='w-[1.5rem]'/> </li>
+      <li onClick={logOutFn} className='p-2 hover:bg-zinc-100 flex justify-between'>Log out <ArrowRightOnRectangleIcon className='w-6'/> </li>
     </ul>
   )
 }
@@ -27,11 +27,11 @@ export default function DashSide() {
 const AdminParts = () => {
   return (
     <>
-      <Link href="/dashboard" className='p-2 py-3 border-b-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Dashboard <ComputerDesktopIcon className='w-[1.5rem]'/> </Link>
-      <Link href="/dashboard/users" className='p-2 py-3 border-b-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Users <UserIcon className='w-[1.5rem]'/> </Link>
-      <Link href="/dashboard/estates" className='p-2 py-3 border-b-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Estates <HomeModernIcon className='w-[1.5rem]'/> </Link>
-      <Link href="/dashboard/agents" className='p-2 py-3 border-b-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Agents <UsersIcon className='w-[1.5rem]'/> </Link>
-      <Link href="/dashboard/requests" className='p-2 py-3 border-b-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Requests <TicketIcon className='w-[1.5rem]'/> </Link>
+      <Link style={{borderBottom : '1px solid rgb(212 , 212 , 216)'}} href="/dashboard" className='p-2 py-3   hover:bg-zinc-100 flex justify-between'>Dashboard <ComputerDesktopIcon className='w-6'/> </Link>
+      <Link style={{borderBottom : '1px solid rgb(212 , 212 , 216)'}} href="/dashboard/users" className='p-2 py-3   hover:bg-zinc-100 flex justify-between'>Users <UserIcon className='w-6'/> </Link>
+      <Link style={{borderBottom : '1px solid rgb(212 , 212 , 216)'}} href="/dashboard/estates" className='p-2 py-3   hover:bg-zinc-100 flex justify-between'>Estates <HomeModernIcon className='w-6'/> </Link>
+      <Link style={{borderBottom : '1px solid rgb(212 , 212 , 216)'}} href="/dashboard/agents" className='p-2 py-3   hover:bg-zinc-100 flex justify-between'>Agents <UsersIcon className='w-6'/> </Link>
+      <Link style={{borderBottom : '1px solid rgb(212 , 212 , 216)'}} href="/dashboard/requests" className='p-2 py-3   hover:bg-zinc-100 flex justify-between'>Requests <TicketIcon className='w-6'/> </Link>
     </>
   )
 }
@@ -39,8 +39,8 @@ const AdminParts = () => {
 const AgentParts = () => {
   return (
     <>
-      <Link href="/dashboard/estates" className='p-2 py-3 border-b-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Estates <HomeModernIcon className='w-[1.5rem]'/> </Link>
-      <Link href="/dashboard/requests" className='p-2 py-3 border-b-[1px] border-zinc-300 hover:bg-zinc-100 flex justify-between'>Messages <EnvelopeIcon className='w-[1.5rem]'/> </Link>
+      <Link style={{borderBottom : '1px solid rgb(212 , 212 , 216)'}} href="/dashboard/estates" className='p-2 py-3   hover:bg-zinc-100 flex justify-between'>Estates <HomeModernIcon className='w-6'/> </Link>
+      <Link style={{borderBottom : '1px solid rgb(212 , 212 , 216)'}} href="/dashboard/requests" className='p-2 py-3   hover:bg-zinc-100 flex justify-between'>Messages <EnvelopeIcon className='w-6'/> </Link>
     </>
   )
 }

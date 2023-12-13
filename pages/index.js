@@ -15,22 +15,22 @@ export default function Home({estates}) {
       <MainHeader/>
       <InfoBoxes/>
       <Achivement/>
-      <h3 className='text-2xl font-bold text-center mb-[3rem] max-sm:text-lg max-sm:mb-[1rem]'>Check out some estates</h3>
-      <section className='flex gap-4 justify-around flex-wrap max-w-[1400px] mx-auto my-[1rem] max-md:p-3'>
+      <h3 className='text-2xl font-bold text-center mb-12 max-sm:text-lg max-sm:mb-4'>Check out some estates</h3>
+      <section style={{maxWidth : '1400px'}} className='flex gap-4 justify-around flex-wrap mx-auto my-4 max-md:p-3'>
         {estates.map(estate => {
           return <Estate key={estate.id} {...estate}/>
         }) }
       </section>
       <Parallax/>
-      <h3 className='text-2xl font-bold text-center my-[3rem]'>Some of our documents</h3>
-      <section className='flex flex-wrap gap-4 justify-around max-w-[1400px] mx-auto my-[2rem] max-md:m-4'>
+      <h3 className='text-2xl font-bold text-center my-12'>Some of our documents</h3>
+      <section style={{maxWidth : '1400px'}} className='flex flex-wrap gap-4 justify-around mx-auto my-8 max-md:m-4'>
         <DocumentItem img="/documents/1.png"/>
         <DocumentItem img="/documents/2.png"/>
         <DocumentItem img="/documents/3.png"/>
         <DocumentItem img="/documents/4.png"/>
       </section>
       <AgentsSection/>
-      <h3 className='text-2xl font-bold text-center mt-[4rem] max-sm:mt-[2rem]'>FAQs</h3>
+      <h3 className='text-2xl font-bold text-center mt-16 max-sm:mt-8'>FAQs</h3>
       <FAQ/>
       <Services/>
     </>

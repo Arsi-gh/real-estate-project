@@ -7,16 +7,16 @@ import React from 'react'
 
 export default function Articles() {
   return (
-    <div className='max-w-[1500px] mx-auto px-4'>
-      <main className='flex gap-4 m-[1rem] my-[2rem] max-md:flex-col'>
-        <div className='h-fit sticky top-[5rem] max-md:hidden'>
+    <div style={{maxWidth : '1500px'}} className='mx-auto px-4'>
+      <main className='flex gap-4 m-4 my-8 max-md:flex-col'>
+        <div className='h-fit sticky top-20 max-md:hidden'>
           <SideFilter>
             <PropertySort/>
           </SideFilter>
           <DocumentAdviceCon/>
         </div>
-        <button className='hidden gap-2 items-center w-fit font-semibold max-md:flex'> <AdjustmentsHorizontalIcon className='w-[1.8rem]'/> Filters</button>
-        <div className='ml-[2rem] flex gap-6 flex-wrap max-md:mx-auto max-md:gap-3'>
+        <button className='hidden gap-2 items-center w-fit font-semibold max-md:flex'> <AdjustmentsHorizontalIcon className='w-7'/> Filters</button>
+        <div className='ml-8 flex gap-6 flex-wrap max-md:mx-auto max-md:gap-3'>
           <DocumentItem img="documents/1.png"/>
           <DocumentItem img="documents/2.png"/>
           <DocumentItem img="documents/3.png"/>

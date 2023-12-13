@@ -7,9 +7,9 @@ import React from 'react'
 
 export default function Estates({estates}) {
   return (
-    <div className='max-w-[1500px] mx-auto px-4'>
-      <main className='flex gap-4 m-[1rem] my-[2rem] max-md:mx-auto max-md:flex-col'>
-        <div className='h-fit sticky top-[5rem]'>
+    <div style={{maxWidth : '1500px'}} className='mx-auto px-4'>
+      <main className='flex gap-4 m-4 my-8 max-md:mx-auto max-md:flex-col'>
+        <div className='h-fit sticky top-20'>
           <SideFilter>
             <PropertyStatus/>
             <PropertyType/>
@@ -22,8 +22,8 @@ export default function Estates({estates}) {
             <PropertyFeatures/>
           </SideFilter>
         </div> 
-        <button className='hidden gap-2 items-center w-fit font-semibold max-md:flex'> <AdjustmentsHorizontalIcon className='w-[1.8rem]'/> Filters</button>
-        <div className='ml-[2rem] content-start flex gap-6 flex-wrap max-md:m-0 max-md:gap-3 max-sm:gap-0'>
+        <button className='hidden gap-2 items-center w-fit font-semibold max-md:flex'> <AdjustmentsHorizontalIcon className='w-7'/> Filters</button>
+        <div className='ml-8 content-start flex gap-6 flex-wrap max-md:m-0 max-md:gap-3 max-sm:gap-0'>
           {!estates && <p>loading...</p>}
           {estates.map((estate) => {
             return <Estate key={estate.id} {...estate}/>

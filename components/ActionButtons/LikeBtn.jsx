@@ -2,6 +2,8 @@ import { HeartIcon } from "@heroicons/react/24/outline";
 import { useUser } from "../UserRoleProvider";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import { toastConfings } from "../toastConfigs";
 
 
 export default function LikeBtn({id}) {
@@ -37,17 +39,19 @@ export default function LikeBtn({id}) {
   } , [])
 
   const clickHandler = ()  => {
-    if (!user) return console.log('log in first')
+    if (!user) return toast.error("Please log in first" , toastConfings)
     if (user.role === "USER") {
         if (isAdded) {
           removeFavorite()
+          toast.success("Your like has been removed" , toastConfings)
         } else {
           addFavorite()
+          toast.success("Thanks for your like" , toastConfings)
         }
     }
   }
 
   return (    
-    <HeartIcon onClick={() => clickHandler()} strokeWidth={2} className={`cursor-pointer rounded-md shadow-customeThree hover:bg-red-500 w-[2.5rem] p-2 flex gap-2 items-center transition-all hover:text-white hover:scale-110 ${isAdded ? 'text-white scale-110 bg-red-500' : 'text-red-500 bg-white'}`}/>
+    <HeartIcon onClick={() => clickHandler()} strokeWidth={2} className={`m-2 absolute right-0 cursor-pointer rounded-md shadow-customeThree hover:bg-red-500 w-10 p-2 flex gap-2 items-center transition-all hover:text-white hover:scale-110 ${isAdded ? 'text-white scale-110 bg-red-500' : 'text-red-500 bg-white'}`}/>
   )
 }

@@ -9,6 +9,8 @@ import AddEstateForm from '@/components/dashboardComponents/globalUsage/AddEstat
 import AgentReqForm from '@/components/dashboardComponents/globalUsage/AgentReqForm'
 import '@/styles/globals.css'
 import { useState } from 'react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App({ Component, pageProps }) {
 
@@ -21,7 +23,6 @@ export default function App({ Component, pageProps }) {
   return (
   <UserProvider>
     <Nav displayLogin={setDisplayLogin} displaySignUp={setDisplaySignUp} displayAddEstate={setDisplayAddEstate} displayFavorites={setDisplayFavorites}/>
-    {/* <AddressGuide/> */}
     <Component {...pageProps} />
     <FooterPart/>
     {displayLogin && <LoginForm displayHandler={setDisplayLogin}/>}
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }) {
     {displayAddEstate && <AddEstateForm displayHandler={setDisplayAddEstate}/>}
     {displayAgentReq && <AgentReqForm displayHandler={setDisplayAgentReq}/> }
     {displayFavorites && <FavoritesModal displayHandler={setDisplayFavorites}/>}
+    <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" /><ToastContainer />
   </UserProvider>
   )
 }

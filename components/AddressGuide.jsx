@@ -14,9 +14,9 @@ export default function AddressGuide() {
 
   return (
     currentPage && (
-        <header className='max-w-[1400px] mx-auto text-xl font-bold mt-[1rem] p-5 py-2 flex gap-4 items-end'>
+        <header style={{maxWidth : '1500px'}} className='mx-auto text-xl font-bold mt-4 p-5 py-2 flex gap-4 items-end'>
             <p>Home</p>
-            <ChevronRightIcon className='w-[1.5rem] text-zinc-600'/>
+            <ChevronRightIcon className='w-6 text-zinc-600'/>
             <p className='capitalize'>{currentPage}</p>
         </header>
     )

@@ -43,16 +43,16 @@ const AgentItem = ({displayAgent , displayMessage}) => {
   return (
     <div className="bg-white justify-between p-2 pl-4 rounded-lg shadow-customeOne flex gap-2 items-center">
       <span>1</span>
-      <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
+      <span style={{width : '1px'}} className="h-8 bg-zinc-300"></span>
       <p className="">Arsalan ghoochani</p>
-      <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
+      <span style={{width : '1px'}} className="h-8 bg-zinc-300"></span>
       <p><b>Added properties : </b>22</p>
-      <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
+      <span style={{width : '1px'}} className="h-8 bg-zinc-300"></span>
       <p><b>Hired since : </b>1 year ago</p>
-      <span className="h-[2rem] w-[1px] bg-zinc-300"></span>
+      <span style={{width : '1px'}} className="h-8 bg-zinc-300"></span>
       <span className="flex gap-4">
-        <EnvelopeIcon onClick={() => displayMessage(true)} className="cursor-pointer w-[1.6rem]"/>
-        <EyeIcon onClick={() => displayAgent(true)} className="cursor-pointer w-[1.6rem]"/>
+        <EnvelopeIcon onClick={() => displayMessage(true)} className="cursor-pointer w-6"/>
+        <EyeIcon onClick={() => displayAgent(true)} className="cursor-pointer w-6"/>
       </span>
     </div>
   )
