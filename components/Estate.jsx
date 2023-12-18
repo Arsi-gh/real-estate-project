@@ -18,8 +18,8 @@ export default function Estate({id , title , images , forRent , location , type 
     </div>
   )
   return (
-    <Link href={`/estates/${id}`} className='w-80 h-fit flex flex-col rounded-xl overflow-hidden bg-zinc-100 shadow-customeOne cursor-pointer max-md:w-full max-md:flex-row max-md:p-2 max-sm:rounded-none max-sm:bg-white max-sm:shadow-none max-sm:border-t-2 max-sm:flex-col border-zinc-300'>
-        <img className='rounded-xl h-48 object-cover max-md:h-32 max-md:w-40' src={images[0]} alt="" />
+    <Link href={`/estates/${id}`} className='w-80 h-fit flex flex-col rounded-xl overflow-hidden bg-zinc-100 shadow-customeOne cursor-pointer max-md:w-full max-md:flex-row max-md:p-2 max-md:items-center max-sm:rounded-none max-sm:bg-white max-sm:shadow-none max-sm:border-t max-[350px]:flex-col border-zinc-300'>
+        <img className='rounded-xl h-48 object-cover max-md:h-32 max-md:w-40 max-[350px]:w-full' src={images[0]} alt="" />
         <div className='flex flex-wrap items-center gap-2 gap-x-4 p-2 max-md:justify-between'>
             <b className='hidden max-md:block max-sm:text-sm'>{title}</b>
             <span className='text-lg font-bold text-green-500 max-sm:text-sm'>{price} $ {forRent && <b className='text-neutral-800 font-medium text-sm'>monthly</b>}</span>

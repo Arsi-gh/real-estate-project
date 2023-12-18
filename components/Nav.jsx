@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NavControls from "./dashboardComponents/globalUsage/NavControls";
-import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowRightOnRectangleIcon, Bars3BottomLeftIcon, UserPlusIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useUser } from "./UserRoleProvider";
 import { useState } from "react";
 
@@ -45,9 +45,9 @@ const SideLinks = ({displayHandler}) => {
 
 const AuthenticateControls = ({displaySignUp , displayLogin}) => {
   return (
-    <div>
-      <button onClick={() => displaySignUp(true)} className="px-4 p-2 bg-white shadow-customeOne text-neutral-800 rounded-md font-bold mr-2">sign up</button>
-      <button onClick={() => displayLogin(true)} className="px-4 p-2 bg-neutral-800 rounded-md shadow-customeFour font-bold text-white">login</button>
+    <div className="flex">
+      <button onClick={() => displaySignUp(true)} className="px-4 p-2 bg-white shadow-customeOne text-neutral-800 rounded-md font-semibold mr-2 flex gap-2 items-center"><p className="max-sm:hidden">Create account</p> <UserPlusIcon className="w-6"/> </button>
+      <button onClick={() => displayLogin(true)} className="px-4 p-2 bg-neutral-800 rounded-md shadow-customeFour font-semibold text-white flex gap-2 items-center"><p className="max-sm:hidden">login</p><ArrowRightOnRectangleIcon className="w-6"/> </button>
     </div>
   )
 }

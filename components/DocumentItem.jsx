@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function DocumentItem({img}) {
   return (
-    <div className='w-80 h-fit rounded-lg shadow-customeOne overflow-hidden max-md:w-full max-md:flex max-sm:items-center max-sm:ronuded-none max-sm:shadow-none max-sm:border-y-2 max-sm:rounded-none max-sm:p-2 border-zinc-300 max-sm:flex-col'>
+    <div className='w-80 h-fit rounded-lg shadow-customeOne overflow-hidden max-md:w-full max-md:flex max-sm:items-center max-sm:ronuded-none max-sm:shadow-none max-sm:border-y max-sm:rounded-none max-sm:p-2 border-zinc-300 max-sm:flex-col'>
         <img className='w-full object-cover rounded-lg max-md:w-60 max-md:rounded-r-none max-sm:rounded-lg max-sm:w-full max-sm:max-h-40' src={img} alt="" />
         <div className='p-2 flex flex-wrap gap-2 max-sm:justify-center'>
           <strong className='w-full max-sm:text-center max-sm:text-sm'>Document title</strong>

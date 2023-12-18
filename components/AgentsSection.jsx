@@ -51,7 +51,7 @@ export default function AgentsSection() {
                 </span>
             </div>
         </section>
-        <div style={{width : '1500px'}} className="text-lg flex items-center gap-4 justify-between px-20 mx-auto mt-16 my-8 max-sm:flex-col">
+        <div className="max-w-[1500px] text-lg flex items-center gap-4 justify-between px-20 mx-auto mt-16 my-8 max-sm:flex-col max-sm:text-sm">
             <p>Wanna become an agnet ?</p>
             <button className="text-white bg-neutral-800 rounded-md shadow-customeFour p-2 px-4 flex items-center gap-2">Enroll know <ArrowLongRightIcon className="w-6"/> </button>
         </div>

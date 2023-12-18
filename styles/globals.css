@@ -7,4 +7,22 @@
       -webkit-appearance: none;
       margin: 0;
     }
+    ::-webkit-scrollbar {
+      display: hidden;
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      display: hidden;
+    }
+
+    ::-webkit-scrollbar-corner {
+      display: hidden;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #c9c9c9;
+    }
+
 }

@@ -15,7 +15,7 @@ export default function ShareBtn({id}) {
   }
     
   return (
-    <span onClick={() => clickHandler()} className='flex gap-x-4 pr-4 items-center m-2 absolute left-0 bg-white rounded-md shadow-customeThree p-2 cursor-pointer transition-all hover:scale-x-105 hover:bg-neutral-800 hover:text-white'>
+    <span onClick={clickHandler} className='flex gap-x-4 pr-4 items-center m-2 absolute left-0 bg-white rounded-md shadow-customeThree p-2 cursor-pointer transition-all hover:scale-x-105 hover:bg-neutral-800 hover:text-white'>
         <ShareIcon className='w-6'/>
         <p>Share </p>
     </span>

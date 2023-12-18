@@ -51,7 +51,7 @@ const RequestCon = () => {
     if (requests) return (
         <div style={{height : '35rem'}} className="flex flex-col gap-3 py-1 px-4 overflow-auto">
             {requests.map((req) => {
-                return <Request key={req.id} {...req} displayReq={setDisplayReq} changeReqId={setReqId}/>
+                return <Request isMinify={false} key={req.id} {...req} displayReq={setDisplayReq} changeReqId={setReqId}/>
             })
             }
             {displayReq && <RequestModal id={reqId} displayReq={setDisplayReq}/>}
@@ -59,7 +59,7 @@ const RequestCon = () => {
     )
 }
 
-const Request = ({id , category , email , created_At , subject , displayReq , changeReqId}) => {
+export const Request = ({id , category , email , created_At , subject , displayReq , changeReqId , isMinify}) => {
 
     const handleClick = (id) => {
         displayReq(true)
@@ -71,12 +71,18 @@ const Request = ({id , category , email , created_At , subject , displayReq , ch
             <p className='flex gap-2 items-center w-60 truncate'> <TicketIcon className='w-6'/> <b>Title : </b>{subject}</p>
             <span style={{width : '1px'}} className='h-6 bg-zinc-300'></span>
             <p className='text-red-500 w-32'><b className='text-neutral-800'>Category : </b>{category}</p>
-            <span style={{width : '1px'}} className='h-6 bg-zinc-300'></span>
-            <p className='w-80'><b>Email : </b>{email}</p>
-            <span style={{width : '1px'}} className='h-6 bg-zinc-300'></span>
-            <p className='flex-1'><b>created at : </b>{created_At.slice(0 , 10)}</p>
-            <span style={{width : '1px'}} className='h-6 bg-zinc-300'></span>
-            <button onClick={() => handleClick(id)} className='p-2 rounded-lg bg-zinc-100 shadow-customeOne hover:bg-zinc-200'>See more</button>
+            {
+                !isMinify && (
+                    <>
+                    <span style={{width : '1px'}} className='h-6 bg-zinc-300'></span>
+                    <p className='w-80'><b>Email : </b>{email}</p>
+                    <span style={{width : '1px'}} className='h-6 bg-zinc-300'></span>
+                    <p className='flex-1'><b>created at : </b>{created_At.slice(0 , 10)}</p>
+                    <span style={{width : '1px'}} className='h-6 bg-zinc-300'></span>
+                    <button onClick={() => handleClick(id)} className='p-2 rounded-lg bg-zinc-100 shadow-customeOne hover:bg-zinc-200'>See more</button>
+                    </>
+                )
+            }
         </div>
     )
 }

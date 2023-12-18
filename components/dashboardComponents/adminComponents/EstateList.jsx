@@ -18,7 +18,7 @@ export default function EstateList() {
     
   return (
     <div className="w-full flex p-2">
-        <div className="flex flex-1 flex-col gap-4 p-2">
+        <div className="flex flex-1 flex-col gap-4">
             <EstateFilters/>
             <EstateListCon activeEstate={activeEstate} toggleActiveEstate={setActiveEstate}/>
         </div>
@@ -29,7 +29,7 @@ export default function EstateList() {
 
 const EstateFilters = () => {
     return (
-        <div className='flex gap-2 items-center'>
+        <div className='flex gap-2 px-2 items-center'>
             <b>Filter : </b>
             <SortCom/>
             <PropertyCom/>
@@ -55,7 +55,7 @@ const EstateListCon = ({activeEstate , toggleActiveEstate}) => {
         if (!estates) return <div className='flex-1 flex flex-col gap-2'>loading</div>
 
     return (
-        <div className='flex-1 flex flex-col gap-2'>
+        <div style={{maxHeight : '35rem'}} className='flex-1 flex flex-col gap-2 overflow-scroll p-2'>
             {estates.map((estate) => <EstateItem activeEstate={activeEstate} toggleActiveEstate={toggleActiveEstate} key={estate.id} {...estate}/> )}
         </div>
     )
@@ -109,7 +109,7 @@ const EstatePreview = ({id}) => {
     
     if (estate) return (  
         <>
-            <div style={{width : '25rem' , height : '39rem'}} ref={containerRef} className='overflow-auto flex flex-wrap justify-between items-center p-2 gap-2 rounded-lg bg-white shadow-customeOne'>
+            <div ref={containerRef} className='w-[25rem] h-[39rem] overflow-y-scroll flex flex-wrap justify-between items-center p-2 gap-2 rounded-lg bg-white shadow-customeOne'>
                 <img className='w-full h-60 rounded-lg' src={estate.images[0]} alt="" />
                 <div className='flex gap-2'>
                     {estate.images.slice(1).map((img , index) => <img key={index} className='w-1/3 h-20 object-cover rounded-lg' src={img} alt="" />)}

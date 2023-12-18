@@ -30,7 +30,7 @@ const ContactOptions = () => {
                 <DevicePhoneMobileIcon className='w-12 p-3 rounded-full bg-neutral-800 text-white'/>
             </ContactOption>
             <ContactOption title="Location" text="Los angles sen valley jr alley mehrani office USA 3454">
-                <MapPinIcon className='w-12 p-3 rounded-full bg-neutral-800 text-white'/>
+                <MapPinIcon className='min-w-[3rem] max-w-[3rem] p-3 rounded-full bg-neutral-800 text-white'/>
             </ContactOption>
         </div>
     )

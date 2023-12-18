@@ -26,7 +26,7 @@ export default function LoginForm({displayHandler}) {
     if (data.length) {
       setUser(data[0])
       displayHandler(false)
-      toast.success("Login successfully" , toastConfings)
+      toast.success("Login successfully" , toastConfings )
     } else {
       toast.error("Your password or email is not correct" , toastConfings)
     }
@@ -46,7 +46,7 @@ export default function LoginForm({displayHandler}) {
   return (
     <>
         <div onClick={() => displayHandler(false)} className="z-10 fixed top-0 h-screen w-full bg-black opacity-60"></div>
-        <form style={{width : '30rem'}} onSubmit={formik.handleSubmit} className="z-20 fixed left-1/2 sm:top-1/2 text-neutral-800 transform -translate-x-1/2 sm:-translate-y-1/2 bg-white p-4 rounded-lg flex flex-col gap-y-4 max-sm:w-full max-sm:bottom-0 max-sm:rounded-b-none">
+        <form onSubmit={formik.handleSubmit} className="w-[30rem] z-20 fixed left-1/2 sm:top-1/2 text-neutral-800 transform -translate-x-1/2 sm:-translate-y-1/2 bg-white p-4 rounded-lg flex flex-col gap-y-4 max-sm:w-full max-sm:bottom-0 max-sm:rounded-b-none">
             <div className="flex justify-between">
                 <b className="text-lg">Login</b>
                 <XMarkIcon onClick={() => displayHandler(false)} strokeWidth={2} className="w-6 cursor-pointer"/>

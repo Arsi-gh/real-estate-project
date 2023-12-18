@@ -13,7 +13,7 @@ export const PropertyStatus = () => {
     return (
         <div style={{borderTop : '1px solid rgba(212 , 212 , 216 , 70%)'}} className=" border-zinc-200 flex">
             <button onClick={() => statusHandler(1)} className={`flex-1 p-2 ${currentStat == 1 && 'bg-zinc-100'}`}>All</button>
-            <button style={{borderLeft : '1px solid rgba(212 , 212 , 216 , 70%)' , borderRight : '1px solid rgba(212 , 212 , 216 , 70%)'}} onClick={() => statusHandler(2)} className={`flex-1 p-2 ${currentStat == 2 && 'bg-zinc-100'}`}>Buy</button>
+            <button onClick={() => statusHandler(2)} style={{borderLeft : '1px solid rgba(212 , 212 , 216 , 70%)' , borderRight : '1px solid rgba(212 , 212 , 216 , 70%)'}} className={`flex-1 p-2 ${currentStat == 2 && 'bg-zinc-100'}`}>Buy</button>
             <button onClick={() => statusHandler(3)} className={`flex-1 p-2 ${currentStat == 3 && 'bg-zinc-100'}`}>Rent</button>
         </div>
     )

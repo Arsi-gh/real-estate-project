@@ -2,7 +2,7 @@ import { ArrowPathIcon, ClipboardDocumentIcon, ClipboardDocumentListIcon, CubeTr
 
 export default function Services() {
   return (
-    <section style={{maxWidth : '1500px'}} className="h-40 items-center m-auto flex my-40 px-32 max-md:flex-col max-sm:my-12">
+    <section className="max-w-[1500px] min-h-40 items-center m-auto flex my-40 px-32 max-md:flex-col max-sm:my-12">
         <div style={{minWidth : '25rem'}} className="flex items-center justify-center relative">
             <p className="text-5xl font-semibold  bg-white max-sm:text-3xl">Our servise</p>
             <ArrowPathIcon className="absolute -left-10 bottom-1/2 w-20 h-20 p-6 rounded-lg text-neutral-700 bg-white shadow-customeThree max-sm:hidden"/>
